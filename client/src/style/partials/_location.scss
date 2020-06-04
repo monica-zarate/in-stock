@@ -1,0 +1,16 @@
+.location {
+  @extend .container;
+  &__top-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  &__title {
+  }
+  &__form {
+  }
+  &__search-input {
+  }
+}
+
+.warehouse-list {
+}
