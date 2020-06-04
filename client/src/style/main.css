@@ -157,7 +157,7 @@ li {
 
 .navigation__options-text {
   margin-top: 0;
-  font-family: Avenir Next Demi Bold;
+  font-family: "Avenir Next Demi Bold";
   font-size: 0.875rem;
   line-height: 1.375rem;
   text-decoration: none;
@@ -230,7 +230,7 @@ li {
     padding-top: 2.3rem;
   }
   .navigation__options-text {
-    font-family: Avenir Next Demi Bold;
+    font-family: "Avenir Next Demi Bold";
     font-size: 1rem;
     line-height: 1.375rem;
   }
@@ -296,7 +296,7 @@ li {
 }
 
 label {
-  font-family: Avenir Next Regular;
+  font-family: "Avenir Next Regular";
   font-size: 0.875rem;
   line-height: 1.375rem;
   color: #afafaf;
@@ -306,7 +306,7 @@ label {
 
 p {
   margin-bottom: 1.5rem;
-  font-family: Avenir Next Regular;
+  font-family: "Avenir Next Regular";
   font-size: 0.875rem;
   line-height: 1.375rem;
 }
@@ -326,7 +326,7 @@ p {
 }
 
 .inventory__title {
-  font-family: Avenir Next Bold;
+  font-family: "Avenir Next Bold";
   font-size: 1.5rem;
   line-height: 1.375rem;
   padding-bottom: 1rem;
@@ -363,7 +363,7 @@ p {
   width: inherit;
   height: 2.875rem;
   margin-right: 0.3125rem;
-  font-family: Avenir Next Demi Bold;
+  font-family: "Avenir Next Demi Bold";
   font-size: 0.875rem;
   line-height: 1.375rem;
   border: none;
@@ -375,7 +375,7 @@ p {
 
 .inventory__product {
   text-decoration: none;
-  font-family: Avenir Next Demi Bold;
+  font-family: "Avenir Next Demi Bold";
   font-size: 0.875rem;
   line-height: 1.375rem;
   padding-bottom: 1rem;
@@ -414,7 +414,7 @@ p {
   p,
   label {
     margin: unset;
-    font-family: Avenir Next Regular;
+    font-family: "Avenir Next Regular";
     font-size: 1rem;
     line-height: 1.5rem;
   }
@@ -503,7 +503,7 @@ p {
     margin-bottom: 3rem;
   }
   .inventory__title {
-    font-family: Avenir Next Bold;
+    font-family: "Avenir Next Bold";
     font-size: 2.25rem;
     line-height: 2.75rem;
     padding-bottom: unset;
@@ -550,8 +550,20 @@ p {
 }
 
 .location__title {
-  font-family: "Avenir-Bold";
+  font-family: "Avenir Next Bold";
   font-size: 36px;
   line-height: 44px;
+}
+
+.warehouse-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 /*# sourceMappingURL=main.css.map */
