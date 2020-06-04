@@ -1,24 +1,5 @@
 //Breakpoints
 
-//Media Query for Tablet
-@mixin tablet {
-  @media only screen and (min-width: 768px) {
-    @content;
-  }
-}
-
-//Media Query for Desktop
-@mixin desktop {
-  @media only screen and (min-width: 1440px) {
-  }
-}
-
-@mixin mobile {
-  @media (min-width: $mobile-width) {
-    @content;
-  }
-}
-
 @mixin tablet {
   @media (min-width: $tablet-width) {
     @content;
