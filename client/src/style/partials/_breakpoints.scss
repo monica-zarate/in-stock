@@ -1,8 +1,4 @@
-@mixin mobile {
-  @media (min-width: $mobile-width) {
-    @content;
-  }
-}
+//Breakpoints
 
 @mixin tablet {
   @media (min-width: $tablet-width) {

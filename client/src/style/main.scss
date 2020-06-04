@@ -1,6 +1,16 @@
 @import "./partials/variables";
-@import "./partials/fonts";
 @import "./partials/global";
+
+//Site Design Imports
+@import "./partials/breakpoints";
+@import "./partials/typography";
+@import "./partials/global";
+
+//Site Section Imports
+@import "./partials/header";
+@import "./partials/inventory";
+
+@import "./partials/variables";
 @import "./partials/mixins";
 
 // Location Page //
