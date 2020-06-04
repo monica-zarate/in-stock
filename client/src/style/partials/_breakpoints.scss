@@ -1,4 +1,3 @@
-
 //Breakpoints
 
 //Media Query for Tablet
@@ -11,6 +10,8 @@
 //Media Query for Desktop
 @mixin desktop {
   @media only screen and (min-width: 1440px) {
+  }
+}
 
 @mixin mobile {
   @media (min-width: $mobile-width) {
@@ -25,7 +26,6 @@
 }
 @mixin desktop {
   @media (min-width: $desktop-width) {
-
     @content;
   }
 }
