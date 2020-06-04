@@ -5,6 +5,7 @@
     align-items: center;
   }
   &__title {
+    @include header(36px, 44px);
   }
   &__form {
   }

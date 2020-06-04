@@ -1,3 +1,18 @@
+@font-face {
+  font-family: "Avenir-Regular";
+  src: url("../assets/fonts/AvenirNextProLT/Regular.otf");
+}
+
+@font-face {
+  font-family: "Avenir-Bold";
+  src: url("../assets/fonts/AvenirNextProLT/Bold.otf");
+}
+
+@font-face {
+  font-family: "Avenir-Demi";
+  src: url("../assets/fonts/AvenirNextProLT/Demi.otf");
+}
+
 *,
 *::before,
 *::after {
@@ -30,5 +45,11 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.location__title {
+  font-family: "Avenir-Bold";
+  font-size: 36px;
+  line-height: 44px;
 }
 /*# sourceMappingURL=main.css.map */
