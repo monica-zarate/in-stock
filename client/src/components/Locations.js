@@ -6,11 +6,10 @@ class Locations extends Component {
       <div className="container location">
         <div className="location__top-wrapper">
           <span className="location__title">Locations</span>
-          <form action="">
+          <form className="location__form">
             <input
               type="search"
               name="search"
-              id=""
               className="location__search-input"
             />
           </form>
