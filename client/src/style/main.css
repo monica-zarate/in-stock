@@ -1,3 +1,40 @@
+html,
+body {
+  margin: 0;
+  background-color: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 59vh;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.container, .location {
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
 @font-face {
   font-family: Avenir Next Regular;
   src: url("../assets/fonts/AvenirNextProLT/Regular.otf");
@@ -510,5 +547,11 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.location__title {
+  font-family: "Avenir-Bold";
+  font-size: 36px;
+  line-height: 44px;
 }
 /*# sourceMappingURL=main.css.map */
