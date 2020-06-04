@@ -1,17 +1,16 @@
-
 @font-face {
   font-family: Avenir Next Regular;
-  src: url(../assets/Fonts/AvenirNextProLT/Regular.otf);
+  src: url("../assets/fonts/AvenirNextProLT/Regular.otf");
 }
 
 @font-face {
   font-family: Avenir Next Demi Bold;
-  src: url(../assets/Fonts/AvenirNextProLT/Demi.otf);
+  src: url("../assets/fonts/AvenirNextProLT/Demi.otf");
 }
 
 @font-face {
   font-family: Avenir Next Bold;
-  src: url(../assets/Fonts/AvenirNextProLT/Bold.otf);
+  src: url("../assets/fonts/AvenirNextProLT/Bold.otf");
 }
 
 html,
@@ -40,6 +39,15 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.container, .location {
+  margin: 0 auto;
+  max-width: 1440px;
 }
 
 .active {
@@ -129,7 +137,7 @@ a {
   text-decoration: none;
 }
 
-@media only screen and (min-width: 768px) {
+@media (min-width: 768px) {
   .header {
     height: 5rem;
     display: -webkit-box;
@@ -191,7 +199,7 @@ a {
   }
 }
 
-@media only screen and (min-width: 1440px) {
+@media (min-width: 1440px) {
   .header__container {
     height: 100%;
     display: -webkit-box;
@@ -365,7 +373,7 @@ p {
   height: 0;
 }
 
-@media only screen and (min-width: 768px) {
+@media (min-width: 768px) {
   p,
   label {
     margin: unset;
@@ -471,7 +479,7 @@ p {
   }
 }
 
-@media only screen and (min-width: 1440px) {
+@media (min-width: 1440px) {
   .inventory {
     padding: 2.5rem 11.25rem;
   }
@@ -493,30 +501,6 @@ p {
   .kebab {
     width: 10.063rem;
   }
-=======
-*,
-*::before,
-*::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  min-height: 100vh;
-}
-
-a {
-  text-decoration: none;
-}
-
-li {
-  list-style: none;
-}
-
-.container, .location {
-  margin: 0 auto;
-  max-width: 1440px;
 }
 
 .location__top-wrapper {
@@ -526,6 +510,5 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-
 }
 /*# sourceMappingURL=main.css.map */
