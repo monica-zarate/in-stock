@@ -17,7 +17,6 @@
     "client": "npm start --prefix ../client",
     "server": "nodemon server.js"
   },
-  },
   "author": "",
   "license": "ISC"
 }
