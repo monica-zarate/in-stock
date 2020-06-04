@@ -1,5 +1,4 @@
 //Fonts
-
 @font-face {
   font-family: Avenir Next Regular;
   src: url("../assets/fonts/AvenirNextProLT/Regular.otf");
@@ -18,19 +17,19 @@
 //Mixins for Headers, Subheaders, and Paragraphs
 
 @mixin header($font-size, $line-height) {
-  font-family: Avenir Next Bold;
+  font-family: "Avenir Next Bold";
   font-size: $font-size;
   line-height: $line-height;
 }
 
 @mixin subheader($font-size, $line-height) {
-  font-family: Avenir Next Demi Bold;
+  font-family: "Avenir Next Demi Bold";
   font-size: $font-size;
   line-height: $line-height;
 }
 
 @mixin paragraph($font-size, $line-height) {
-  font-family: Avenir Next Regular;
+  font-family: "Avenir Next Regular";
   font-size: $font-size;
   line-height: $line-height;
 }
