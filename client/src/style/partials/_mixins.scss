@@ -1,0 +1,29 @@
+@import "./breakpoints";
+
+// FONT MIXINS //
+@mixin header($font-size, $line-height) {
+  font-family: "Avenir-Bold";
+  font-size: $font-size;
+  line-height: $line-height;
+}
+@mixin subheader($font-size, $line-height) {
+  font-family: "Avenir-Demi";
+  font-size: $font-size;
+  line-height: $line-height;
+}
+@mixin text($font-size, $line-height) {
+  font-family: "Avenir-Regular";
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+// MARGINS //
+@mixin offset {
+  margin: 0 16px;
+  @include tablet {
+    margin: 0 24px;
+  }
+  @include desktop {
+    margin: 0 180px;
+  }
+}

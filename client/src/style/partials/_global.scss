@@ -1,0 +1,25 @@
+// GLOBAL //
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+// UTILITY CLASS //
+.container {
+  margin: 0 auto;
+  max-width: $desktop-width;
+}
