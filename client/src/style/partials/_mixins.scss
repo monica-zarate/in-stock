@@ -8,3 +8,13 @@
     margin: 0 180px;
   }
 }
+
+@mixin search-box {
+  @include subheader(14px, 22px);
+  background-color: $alabaster;
+  resize: none;
+  height: 46px;
+  width: 252px;
+  border: 2px solid $mercury;
+  border-radius: 4px;
+}
