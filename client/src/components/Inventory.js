@@ -7,13 +7,17 @@ import axios from "axios";
 export default class Inventory extends Component {
   state = {
     inventoryList: [],
-    loading: true,
   };
 
   componentDidMount() {
-    axios.get("http://localhost:5000/inventory").then((response) => {
-      this.setState({ inventoryList: response.data, loading: false });
-    });
+    axios
+      .get("http://localhost:5000/inventory")
+      .then((response) => {
+        this.setState({
+          inventoryList: response.data,
+        });
+      })
+      .catch((err) => console.log(err));
   }
 
   render() {
@@ -26,7 +30,7 @@ export default class Inventory extends Component {
               className="inventory__search-image"
               type="image"
               src={searchIcon}
-              alt="search"
+              alt="Search Icon"
             />
             <input
               className="inventory__search-bar"
@@ -74,7 +78,7 @@ export default class Inventory extends Component {
                 </div>
               </div>
               <div className="inventory__options">
-                <img src={kebabIcon} alt="options" />
+                <img src={kebabIcon} alt="Kebab Icon" />
               </div>
             </div>
           );
