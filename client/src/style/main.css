@@ -307,12 +307,11 @@ label {
 p {
   margin-bottom: 1.5rem;
   font-family: "Avenir Next Regular";
-  font-size: 0.875rem;
-  line-height: 1.375rem;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
 }
 
 .inventory {
-  background-color: #ffffff;
   padding: 2rem 1rem 0;
 }
 
@@ -391,6 +390,14 @@ p {
   border-bottom: 1.5px solid #e1e1e1;
 }
 
+.inventory__product-name {
+  color: black;
+  font-weight: bold;
+  font-family: "Avenir Next Demi Bold";
+  font-size: 1rem;
+  line-height: 1.375rem;
+}
+
 .inventory__flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -415,36 +422,35 @@ p {
   label {
     margin: unset;
     font-family: "Avenir Next Regular";
-    font-size: 1rem;
+    font-size: 0.9rem;
     line-height: 1.5rem;
   }
   .inventory {
     padding: 3rem 1.5rem;
   }
-  .inventory__add {
-    left: 88vw;
-    height: 5rem;
-    width: 5rem;
-    border-radius: 4rem;
-  }
-  .inventory__add-icon {
-    width: 1.5rem;
-  }
   .inventory__mobile {
     display: none;
   }
   .inventory__search {
-    margin: unset;
+    margin-top: 1.5rem;
   }
   .inventory__product {
     padding-bottom: unset;
   }
   .inventory__container {
-    height: 6.25rem;
+    height: auto;
     padding: 1.5rem 0;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .inventory__product-name {
+    color: black;
+    font-weight: bold;
+    font-family: "Avenir Next Demi Bold";
+    font-size: 1.2rem;
+    line-height: 1.375rem;
+    padding-bottom: 10px;
   }
   .inventory__tablet {
     display: -webkit-box;
@@ -523,8 +529,11 @@ p {
   .inventory__title {
     padding-top: 0.5rem;
   }
+  .inventory__search {
+    margin-top: 2rem;
+  }
   .inventory__container {
-    height: 5rem;
+    height: auto;
   }
   .inventory__shrink {
     line-clamp: 1;
