@@ -14,8 +14,8 @@ function App() {
       <Router>
         <Header />
         <Switch>
-          <Route path="/inventory" component={Inventory}></Route>
-          <Route path="/locations" component={Locations}></Route>
+          <Route path="/inventory" component={Inventory} exact />
+          <Route path="/locations" component={Locations} exact />
         </Switch>
       </Router>
     </div>

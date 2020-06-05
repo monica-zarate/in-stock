@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ArrowRight from "../assets/Icons/SVG/Icon-arrow-right.svg";
 
 class Locations extends Component {
   render() {

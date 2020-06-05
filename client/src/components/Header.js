@@ -17,7 +17,7 @@ export default class Header extends React.Component {
     const location_header = document.getElementsByClassName("location__header");
 
     //if warehouses page, underline location option
-    if (window.location.pathname === "/warehouses/") {
+    if (window.location.pathname === "/locations/") {
       location_header[0].classList.add("active");
       inventory_header[0].classList.remove("active");
     } else {
