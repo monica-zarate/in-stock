@@ -1,0 +1,10 @@
+// MARGINS //
+@mixin offset {
+  margin: 0 16px;
+  @include tablet {
+    margin: 0 24px;
+  }
+  @include desktop {
+    margin: 0 180px;
+  }
+}

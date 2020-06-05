@@ -9,7 +9,8 @@
 /coverage
 
 # CSS.MAP
-.css.map
+*.css.map
+
 # production
 /build
 

@@ -5,9 +5,6 @@ import Locations from "./components/Locations";
 function App() {
   return (
     <div className="App">
-<<<<<<< Updated upstream
-      <Locations />
-=======
       <Router>
         <Header />
         <Switch>
@@ -15,7 +12,6 @@ function App() {
           <Route path="/locations" component={Locations}></Route>
         </Switch>
       </Router>
->>>>>>> Stashed changes
     </div>
   );
 }

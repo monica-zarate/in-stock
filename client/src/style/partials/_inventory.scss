@@ -1,0 +1,184 @@
+//Inventory for Mobile
+label {
+  @include paragraph(0.875rem, 1.375rem);
+  color: $silver;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  @include paragraph(0.875rem, 1.375rem);
+}
+
+.inventory {
+  background-color: $white;
+  padding: 2rem 1rem 0;
+  &__tablet {
+    display: none;
+  }
+  &__shrink {
+    overflow: hidden;
+    display: 2 vertical;
+  }
+
+  &__title {
+    @include header(1.5rem, 1.375rem);
+    padding-bottom: 1rem;
+  }
+  &__search {
+    background-color: $alabaster;
+    width: 15.75rem;
+    height: 3rem;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    border-radius: 0.25rem;
+    border: 1px solid $mercury;
+    margin-bottom: 0.5rem;
+    &-image {
+      height: 1.125rem;
+      width: 1.125rem;
+      margin-left: 1rem;
+      margin-right: 0.5rem;
+    }
+    &-bar {
+      background-color: $alabaster;
+      resize: none;
+      width: inherit;
+      height: 2.875rem;
+      margin-right: 0.3125rem;
+      @include subheader(0.875rem, 1.375rem);
+      border: none;
+      &:focus {
+        outline-width: 0;
+      }
+    }
+  }
+  &__product {
+    text-decoration: none;
+    @include subheader(0.875rem, 1.375rem);
+    padding-bottom: 1rem;
+  }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1.5px solid $mercury;
+  }
+  &__flex {
+    display: flex;
+    flex-direction: column;
+  }
+  &__product-margin,
+  &__options {
+    margin-top: 1.5rem;
+  }
+  &__options {
+    padding-right: 0.25rem;
+    height: 0;
+  }
+}
+
+//Inventory for Tablet
+@include tablet {
+  p,
+  label {
+    margin: unset;
+    @include paragraph(1rem, 1.5rem);
+  }
+
+  .inventory {
+    padding: 3rem 1.5rem;
+    &__add {
+      left: 88vw;
+      height: 5rem;
+      width: 5rem;
+      border-radius: 4rem;
+      &-icon {
+        width: 1.5rem;
+      }
+    }
+    &__mobile {
+      display: none;
+    }
+    &__search {
+      margin: unset;
+    }
+    &__product {
+      padding-bottom: unset;
+    }
+    &__container {
+      height: 6.25rem;
+      padding: 1.5rem 0;
+      align-items: center;
+    }
+    &__tablet {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 0.5rem;
+      &-right {
+        width: 8rem;
+      }
+      &-item {
+        width: 12.1875rem;
+      }
+      &-product {
+        display: flex;
+        flex-direction: column;
+        width: 12.1875rem;
+      }
+      &-stats {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+    &__flex {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    &__top-flex {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 3rem;
+    }
+    &__title {
+      @include header(2.25rem, 2.75rem);
+      padding-bottom: unset;
+    }
+    &__options {
+      padding-bottom: 2.75rem;
+    }
+  }
+  .kebab {
+    width: 7.5rem;
+  }
+}
+
+//Inventory for Desktop
+@include desktop {
+  .inventory {
+    padding: 2.5rem 11.25rem;
+    &__title {
+      padding-top: 0.5rem;
+    }
+    &__container {
+      height: 5rem;
+    }
+    &__shrink {
+      line-clamp: 1;
+    }
+    &__tablet {
+      &-product {
+        width: 17.75rem;
+      }
+      &-right {
+        width: 10.5625rem;
+      }
+    }
+  }
+  .kebab {
+    width: 10.063rem;
+  }
+}

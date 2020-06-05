@@ -14,8 +14,6 @@ class Locations extends Component {
             />
           </form>
         </div>
-<<<<<<< Updated upstream
-=======
         <ul className="warehouse-list">
           <li className="warehouse-list__item">
             <div className="warehouse-list__warehose-wrapper">
@@ -46,7 +44,6 @@ class Locations extends Component {
             </div>
           </li>
         </ul>
->>>>>>> Stashed changes
       </div>
     );
   }
