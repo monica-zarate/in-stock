@@ -22,10 +22,6 @@ class Locations extends Component {
               <span className="warehouse-list__text--name">
                 Warehouse Number 1
               </span>
-            </div>
-            <div className="warehouse-list__warehose-wrapper">
-              <h3 className="warehouse-text--name">Warehouse Number 1</h3>
-
               <p className="warehouse-list__text--address">Location...</p>
               <button className="warehouse-list__btn">
                 <img src={ArrowRight} alt="Arrow Right" />
