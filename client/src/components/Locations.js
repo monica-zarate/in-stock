@@ -1,16 +1,9 @@
 import React, { Component } from "react";
-import ArrowRight from "../assets/Icons/SVG/Icon-arrow-right.svg";
 
 class Locations extends Component {
-  // Component state object
-  state = {
-    warehouseData: [],
-  };
-
   render() {
-    console.log(this.state);
     return (
-      <div className="location">
+      <div className="container location">
         <div className="location__top-wrapper">
           <h1 className="location__title">Locations</h1>
           <form className="location__form">
@@ -24,10 +17,15 @@ class Locations extends Component {
         </div>
         <ul className="warehouse-list">
           <li className="warehouse-list__item">
+
             <div className="warehouse-list__warehouse-wrapper">
               <span className="warehouse-list__text--name">
                 Warehouse Number 1
               </span>
+
+            <div className="warehouse-list__warehose-wrapper">
+              <h3 className="warehouse-text--name">Warehouse Number 1</h3>
+
               <p className="warehouse-list__text--address">Location...</p>
               <button className="warehouse-list__btn">
                 <img src={ArrowRight} alt="Arrow Right" />

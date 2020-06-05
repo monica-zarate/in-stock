@@ -1,6 +1,6 @@
 import React from "react";
 import Logo from "../assets/Logo/Logo-instock.svg";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default class Header extends React.Component {
   constructor(props) {
@@ -41,21 +41,17 @@ export default class Header extends React.Component {
               ref={this.inventoryHeader}
               className="navigation__options inventory__header"
             >
-              {/* <Link to="/inventory"> */}
-              <a href="/inventory">
+              <Link to="/inventory" className="navigation__link">
                 <h2 className="navigation__options-text">Inventory</h2>
-              </a>
-              {/* </Link> */}
+              </Link>
             </div>
             <div
               ref={this.locationHeader}
               className="navigation__options location__header"
             >
-              {/* <Link to="/warehouses/"> */}
-              <a href="/warehouses/">
+              <Link to="/warehouses/" className="navigation__link">
                 <h2 className="navigation__options-text">Locations</h2>
-              </a>
-              {/* </Link> */}
+              </Link>
             </div>
           </nav>
         </header>
