@@ -17,9 +17,7 @@ export default class Inventory extends Component {
   }
 
   render() {
-    return this.state.loading && this.state.instock !== [] ? (
-      <h1>Loading..</h1>
-    ) : (
+    return (
       <div className="inventory">
         <div className="inventory__top-flex">
           <h1 className="inventory__title">Inventory</h1>
@@ -34,7 +32,6 @@ export default class Inventory extends Component {
               className="inventory__search-bar"
               name="search"
               placeholder="Search"
-              autoComplete="off"
             />
           </form>
         </div>
