@@ -17,12 +17,11 @@ class Locations extends Component {
         </div>
         <ul className="warehouse-list">
           <li className="warehouse-list__item">
-
             <div className="warehouse-list__warehouse-wrapper">
               <span className="warehouse-list__text--name">
                 Warehouse Number 1
               </span>
-
+            </div>
             <div className="warehouse-list__warehose-wrapper">
               <h3 className="warehouse-text--name">Warehouse Number 1</h3>
 
