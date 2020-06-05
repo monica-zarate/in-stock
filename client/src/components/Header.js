@@ -49,7 +49,7 @@ export default class Header extends React.Component {
               ref={this.locationHeader}
               className="navigation__options location__header"
             >
-              <Link to="/warehouses/" className="navigation__link">
+              <Link to="/locations" className="navigation__link">
                 <h2 className="navigation__options-text">Locations</h2>
               </Link>
             </div>
