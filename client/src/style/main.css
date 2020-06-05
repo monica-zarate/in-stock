@@ -540,30 +540,182 @@ p {
   }
 }
 
+.location {
+  margin: 0 16px;
+}
+
+@media (min-width: 768px) {
+  .location {
+    margin: 0 24px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .location {
+    margin: 0 180px;
+  }
+}
+
 .location__top-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.location__title {
-  font-family: "Avenir Next Bold";
-  font-size: 36px;
-  line-height: 44px;
-}
-
-.warehouse-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.location__title {
+  font-family: "Avenir Next Bold";
+  font-size: 24px;
+  line-height: 32px;
+  margin: 32px 0 16px 0;
+}
+
+.location__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.location__search-box {
+  font-family: "Avenir Next Demi Bold";
+  font-size: 14px;
+  line-height: 22px;
+  background-color: #fafafa;
+  resize: none;
+  height: 46px;
+  width: 252px;
+  border: 2px solid #e1e1e1;
+  border-radius: 4px;
+}
+
+.warehouse-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 32px 0 24px 0;
+  margin: 0;
+  border-bottom: 2px solid #e1e1e1;
+}
+
+.warehouse-list__item {
+  margin: 16px 0;
+}
+
+.warehouse-list__text--name {
+  font-family: "Avenir Next Demi Bold";
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.warehouse-list__text--address, .warehouse-list__text--contact-name, .warehouse-list__text--number, .warehouse-list__text--email, .warehouse-list__text--categories {
+  margin: 0;
+  font-family: "Avenir Next Regular";
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.warehouse-list__text--contact-position {
+  font-family: "Avenir Next Regular";
+  font-size: 14px;
+  line-height: 20px;
+  font-style: italic;
+  margin: 0;
+}
+
+.warehouse-list__warehouse-wrapper {
+  position: relative;
+}
+
+.warehouse-list__btn {
+  position: absolute;
+  right: 16px;
+  bottom: 24px;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .location__title {
+    font-family: "Avenir Next Bold";
+    font-size: 36px;
+    line-height: 44px;
+    margin: 48px 0;
+  }
+  .warehouse-list {
+    padding: 0 0 24px 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    max-width: 100%;
+  }
+  .warehouse-list__warehouse-wrapper {
+    width: 720px;
+  }
+  .warehouse-list__contact-wrapper, .warehouse-list__contact-info-wrapper, .warehouse-list__categories-wrapper {
+    width: 224px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .warehouse-list__btn {
+    right: -24px;
+  }
+  .warehouse-list__warehouse-wrapper, .warehouse-list__contact-wrapper, .warehouse-list__contact-info-wrapper, .warehouse-list__categories-wrapper {
+    width: 184px;
+    position: relative;
+  }
+  .warehouse-list__warehouse-wrapper::before, .warehouse-list__contact-wrapper::before, .warehouse-list__contact-info-wrapper::before, .warehouse-list__categories-wrapper::before {
+    content: "";
+    position: absolute;
+    top: -32px;
+  }
+  .warehouse-list__warehouse-wrapper::before {
+    content: "WAREHOUSE";
+    font-family: "Avenir Next Regular";
+    font-size: 12px;
+    line-height: 20px;
+    color: #afafaf;
+  }
+  .warehouse-list__contact-wrapper::before {
+    content: "CONTACT";
+    font-family: "Avenir Next Regular";
+    font-size: 12px;
+    line-height: 20px;
+    color: #afafaf;
+  }
+  .warehouse-list__contact-info-wrapper::before {
+    content: "CONTACT INFORMATION";
+    font-family: "Avenir Next Regular";
+    font-size: 12px;
+    line-height: 20px;
+    color: #afafaf;
+  }
+  .warehouse-list__categories-wrapper::before {
+    content: "CATAGORIES";
+    font-family: "Avenir Next Regular";
+    font-size: 12px;
+    line-height: 20px;
+    color: #afafaf;
+  }
 }
 /*# sourceMappingURL=main.css.map */
