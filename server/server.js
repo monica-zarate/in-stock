@@ -33,7 +33,28 @@ app
     warehouse.products.push(itemObject);
     fs.writeFileSync("./model/warehouse.json", JSON.stringify(warehouseArray));
     res.json(warehouseArray);
-  });
+  })
+  .put((req, res) => {
+    const warehouseArray = getWh();
+    let productId = req.body.productId;
+
+    for (i = 0; i < warehouseArray.length; i++) {
+      let productsArray = warehouseArray[i].products;
+      for (j = 0; j < productsArray.length; j++) {
+        if (productId === productsArray[j].productId) {
+          productsArray[j].productId = req.body.productId;
+          productsArray[j].productName = req.body.productName;
+          productsArray[j].description = req.body.description;
+          productsArray[j].inStock = req.body.inStock;
+          productsArray[j].quantity = req.body.quantity;
+          productsArray[j].lastOrdered = req.body.lastOrdered;
+        }
+      }
+    }
+    fs.writeFileSync("./model.warehouse.json", JSON.stringify(warehouseArray));
+    res.json(warehouseArray);
+  })
+  .delete((req, res) => {});
 
 // Get and Post Warehouse Details
 
