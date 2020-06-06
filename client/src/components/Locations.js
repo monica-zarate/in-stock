@@ -37,9 +37,14 @@ class Locations extends Component {
             <ul className="warehouse-list">
               <li className="warehouse-list__item">
                 <div className="warehouse-list__warehouse-wrapper">
+                  {/* <Link
+                    to={`/warehouse/${warehouse.id}`}
+                    className="warehouse-list__link"
+                  > */}
                   <span className="warehouse-list__text--name">
                     {warehouse.name}
                   </span>
+                  {/* </Link> */}
                   <p className="warehouse-list__text--address">
                     {warehouse.address}
                   </p>
