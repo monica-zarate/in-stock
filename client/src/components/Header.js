@@ -11,30 +11,34 @@ export default class Header extends React.Component {
 
   componentDidMount = () => {
     //handle active page underline for the header
-    const inventory_header = document.getElementsByClassName(
+    const inventory__header = document.getElementsByClassName(
       "inventory__header"
     );
-    const location_header = document.getElementsByClassName("location__header");
+    const location__header = document.getElementsByClassName(
+      "location__header"
+    );
 
-    //if warehouses page, underline location option
-    if (window.location.pathname === "/locations/") {
-      location_header[0].classList.add("active");
-      inventory_header[0].classList.remove("active");
+    //if locations page, underline location option
+    if (window.location.pathname === "/locations") {
+      location__header[0].classList.add("active");
+      inventory__header[0].classList.remove("active");
     } else {
       //else underline the inventory
-      inventory_header[0].classList.add("active");
-      location_header[0].classList.remove("active");
+      inventory__header[0].classList.add("active");
+      location__header[0].classList.remove("active");
     }
   };
+
+  //Do I need to do a componentDidUpdate?
 
   render() {
     return (
       <>
         <header className="header">
           <div className="header__container">
-            <a href="/" className="header__anchor">
+            <Link to="/inventory" className="header__anchor">
               <img className="header__logo" src={Logo} alt="Instock Logo" />
-            </a>
+            </Link>
           </div>
           <nav className="navigation">
             <div
