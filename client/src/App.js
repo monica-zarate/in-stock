@@ -1,6 +1,11 @@
 import React from "react";
 
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from "react-router-dom";
 import "./style/main.css";
 import Header from "./components/Header";
 import Inventory from "./components/Inventory";
@@ -13,6 +18,7 @@ function App() {
     <div className="App">
       <Router>
         <Header />
+        <Redirect from="/" to="/inventory" />
         <Switch>
           <Route path="/inventory" component={Inventory} exact />
           <Route path="/locations" component={Locations} exact />
