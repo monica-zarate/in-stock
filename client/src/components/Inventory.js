@@ -68,11 +68,11 @@ export default class Inventory extends Component {
                 </div>
                 <div className="inventory__tablet-stats">
                   <label className="inventory__mobile">LAST ORDERED</label>
-                  <p className="inventory__tablet-right">05/24/2018</p>
+                  <p className="inventory__tablet-right">{inv.lastOrdered}</p>
                   <label className="inventory__mobile">LOCATION</label>
                   <p className="inventory__tablet-right">Toronto, CAN</p>
                   <label className="inventory__mobile">QUANTITY</label>
-                  <p className="inventory__tablet-right">12,000</p>
+                  <p className="inventory__tablet-right">{inv.quantity}</p>
                   <label className="inventory__mobile">STATUS</label>
                   <p className="inventory__tablet-right kebab">{inv.inStock}</p>
                 </div>
