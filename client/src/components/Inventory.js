@@ -52,7 +52,7 @@ export default class Inventory extends Component {
         </div>
         {this.state.inventoryList.map((inv) => {
           return (
-            <div className="inventory__container">
+            <div className="inventory__container" key={inv.productId}>
               <div className="inventory__flex">
                 <label className="inventory__product-margin inventory__mobile">
                   ITEM
