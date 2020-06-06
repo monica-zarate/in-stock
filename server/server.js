@@ -27,6 +27,8 @@ app
       productName: req.body.productName,
       description: req.body.description,
       inStock: req.body.inStock,
+      quantity: req.body.quantity,
+      lastOrdered: req.body.lastOrdered,
     };
     console.log(warehouseId);
     let warehouse = warehouseArray.filter((wh) => wh.id === warehouseId)[0];
@@ -51,10 +53,25 @@ app
         }
       }
     }
-    fs.writeFileSync("./model.warehouse.json", JSON.stringify(warehouseArray));
+    fs.writeFileSync("./model/warehouse.json", JSON.stringify(warehouseArray));
     res.json(warehouseArray);
   })
-  .delete((req, res) => {});
+  .delete((req, res) => {
+    const warehouseArray = getWh();
+    let productId = req.body.productId;
+    for (i = 0; i < warehouseArray.length; i++) {
+      let productsArray = warehouseArray[i].products;
+      let updatedProducts = [];
+      for (j = 0; j < productsArray.length; j++) {
+        if (productsArray[j].productId !== productId) {
+          updatedProducts.push(productsArray[j]);
+        }
+      }
+      warehouseArray[i].products = updatedProducts;
+    }
+    fs.writeFileSync("./model/warehouse.json", JSON.stringify(warehouseArray));
+    res.json(warehouseArray);
+  });
 
 // Get and Post Warehouse Details
 
