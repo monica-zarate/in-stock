@@ -1,13 +1,11 @@
 // MARGINS //
 @mixin offset {
-  padding: 0 16px;
+  margin: 0 16px;
   @include tablet {
-    max-width: 720px;
-    padding: 0 24px;
+    margin: 0 24px;
   }
   @include desktop {
-    max-width: 1080px;
-    padding: 0;
+    margin: 0 180px;
   }
 }
 
@@ -19,4 +17,16 @@
   width: 252px;
   border: 2px solid $mercury;
   border-radius: 4px;
+}
+
+@mixin responsive {
+  padding: 0 16px;
+  @include tablet {
+    max-width: 720px;
+    padding: 0 24px;
+  }
+  @include desktop {
+    max-width: 1080px;
+    padding: 0;
+  }
 }

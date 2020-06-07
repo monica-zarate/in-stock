@@ -1,7 +1,7 @@
 // LOCATION FOR MOBILE
 .location {
   @extend .container;
-  @include offset;
+  @include responsive;
   &__top-wrapper {
     display: flex;
     flex-wrap: wrap;
