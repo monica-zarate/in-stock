@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 import ArrowRight from "../assets/Icons/SVG/Icon-arrow-right.svg";
 
@@ -32,25 +33,42 @@ class Locations extends Component {
             />
           </form>
         </div>
+        <ul className="location__labels-wrapper">
+          <li className="location__label-item">
+            <span className="location__labels--text">WAREHOUSE</span>
+          </li>
+          <li className="location__label-item">
+            <span className="location__labels--text">CONTACT</span>
+          </li>
+          <li className="location__label-item">
+            <span className="location__labels--text">CONTACT INFORMATION</span>
+          </li>
+          <li className="location__label-item">
+            {" "}
+            <span className="location__labels--text">CATEGORIES</span>
+          </li>
+        </ul>
         {this.state.warehouseList.map((warehouse) => {
           return (
             <ul className="warehouse-list">
               <li className="warehouse-list__item">
                 <div className="warehouse-list__warehouse-wrapper">
-                  {/* <Link
-                    to={`/warehouse/${warehouse.id}`}
-                    className="warehouse-list__link"
-                  > */}
                   <span className="warehouse-list__text--name">
                     {warehouse.name}
                   </span>
-                  {/* </Link> */}
+
                   <p className="warehouse-list__text--address">
                     {warehouse.address}
                   </p>
-                  <button className="warehouse-list__btn">
-                    <img src={ArrowRight} alt="Arrow Right" />
-                  </button>
+                  <Link
+                    key={warehouse.id}
+                    to={`/warehouse/${warehouse.id}`}
+                    className="warehouse-list__link"
+                  >
+                    <button className="warehouse-list__btn">
+                      <img src={ArrowRight} alt="Arrow Right" />
+                    </button>
+                  </Link>
                 </div>
               </li>
               <li className="warehouse-list__item">

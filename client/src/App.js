@@ -10,6 +10,7 @@ import "./style/main.css";
 import Header from "./components/Header";
 import Inventory from "./components/Inventory";
 import Locations from "./components/Locations";
+import Warehouses from "./components/Warehouses";
 
 import "./style/main.css";
 import Products from "./components/Products";
@@ -23,6 +24,7 @@ function App() {
         <Switch>
           <Route path="/inventory" component={Inventory} exact />
           <Route path="/locations" component={Locations} exact />
+          <Route path="/warehouse/:id" component={Warehouses} exact />
           <Route path="/product/:id" component={Products} exact />
           <Redirect to="/inventory" from="/" exact />
           <Redirect to="/inventory" from="/product" exact />
