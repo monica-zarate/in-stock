@@ -60,7 +60,7 @@ export default class Inventory extends Component {
                 <div className="inventory__tablet-product">
                   <Link
                     key={inv.productId}
-                    to={`/inventory/${inv.productId}`}
+                    to={`/product/${inv.productId}`}
                     className="inventory__product"
                   >
                     <p className="inventory__product-name">

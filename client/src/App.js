@@ -10,8 +10,6 @@ import "./style/main.css";
 import Header from "./components/Header";
 import Inventory from "./components/Inventory";
 import Locations from "./components/Locations";
-
-import "./style/main.css";
 import Products from "./components/Products";
 
 function App() {
