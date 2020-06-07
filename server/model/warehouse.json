@@ -16,7 +16,9 @@
         "description": "Intel Core i3-1005G1/256GB SSD/8GB RAM/Windows 10.",
         "inStock": "In Stock",
         "quantity": 630,
-        "lastOrdered": "2020-05-24"
+        "lastOrdered": "2020-05-24",
+        "location": "Vancouver, CA",
+        "categories": "electronics, computers, cameras, tv"
       },
       {
         "productId": "01-GP1-YVR",
@@ -24,7 +26,9 @@
         "description": "Capture life-like footage of every excursion with the GoPro HERO 8 sports and helmet camera. Equipped with a 12MP CMOS image sensor and 4K video capability.",
         "inStock": "In Stock",
         "quantity": 630,
-        "lastOrdered": "2020-05-24"
+        "lastOrdered": "2020-05-24",
+        "location": "Vancouver, CA",
+        "categories": "electronics, computers, cameras, tv"
       },
       {
         "productId": "01-CANON-YVR",
@@ -32,7 +36,9 @@
         "description": "Effective 24.1MP CMOS sensor (APS-C format) helps you realize your potential for great photographs.",
         "inStock": "Out of Stock",
         "quantity": 630,
-        "lastOrdered": "2020-05-24"
+        "lastOrdered": "2020-05-24",
+        "location": "Vancouver, CA",
+        "categories": "electronics, computers, cameras, tv"
       },
       {
         "productId": "01-SAMSUNG-YVR",
@@ -40,7 +46,9 @@
         "description": "HDR and PurColor technologies enhance the display with natural colours, while the Crystal Processor 4K fine-tunes the clarity. Its Wi-Fi connectivity helps in streaming your favourite online content.",
         "inStock": "In Stock",
         "quantity": 630,
-        "lastOrdered": "2020-05-24"
+        "lastOrdered": "2020-05-24",
+        "location": "Vancouver, CA",
+        "categories": "electronics, computers, cameras, tv"
       },
       {
         "productId": "01-LG-YVR",
@@ -48,7 +56,9 @@
         "description": "Kick movie night off the right way with this 75 inches LG UHD 4K TV. With a screen that delivers four times the resolution of Full HD, plus a powerful quad-core processor that enhances picture and sound, this TV optimizes your entertainment to pull you right into the action.",
         "inStock": "Out of Stock",
         "quantity": 630,
-        "lastOrdered": "2020-05-24"
+        "lastOrdered": "2020-05-24",
+        "location": "Vancouver, CA",
+        "categories": "electronics, computers, cameras, tv"
       },
       {
         "productId": "01-ROOMBA-YVR",
@@ -56,7 +66,9 @@
         "description": "The Roomba 675 robot vacuum makes it easy to keep your home clean, from anywhere. The patented 3-stage cleaning system is specially engineered to loosen, lift, and suction everything from small particles to large debris from carpets and hard floors.",
         "inStock": "In Stock",
         "quantity": 630,
-        "lastOrdered": "2020-05-24"
+        "lastOrdered": "2020-05-24",
+        "location": "Vancouver, CA",
+        "categories": "electronics, computers, cameras, tv"
       },
       {
         "productId": "01-DYSON-YVR",
@@ -64,7 +76,9 @@
         "description": "The Dyson Cyclone V10 Motorhead Cordless Stick Vacuum offers the suction of a corded vacuum in a cord-free design. Free your house of the dirt, dust, hair, and whatever else your family drags in with the ease and convenience of not having to drag around a huge vacuum.",
         "inStock": "Out of Stock",
         "quantity": 630,
-        "lastOrdered": "2020-05-24"
+        "lastOrdered": "2020-05-24",
+        "location": "Vancouver, CA",
+        "categories": "electronics, computers, cameras, tv"
       }
     ]
   },
@@ -85,7 +99,9 @@
         "description": "Intel Core i3-1005G1/256GB SSD/8GB RAM/Windows 10.",
         "inStock": "In Stock",
         "quantity": 700,
-        "lastOrdered": "2019-08-19"
+        "lastOrdered": "2019-08-19",
+        "location": "Toronto, CA",
+        "categories": "electronics, computers, cameras, tv"
       },
       {
         "productId": "01-HP2-YYZ",
@@ -93,7 +109,9 @@
         "description": "AMD Ryzen 5 3550H/256GB SSD/8GB RAM/NVIDIA GeForce GTX 1050/Win 10.",
         "inStock": "Out of Stock",
         "quantity": 700,
-        "lastOrdered": "2019-08-19"
+        "lastOrdered": "2019-08-19",
+        "location": "Toronto, CA",
+        "categories": "electronics, computers, cameras, tv"
       },
       {
         "productId": "01-GP1-YYZ",
@@ -101,7 +119,9 @@
         "description": "Capture life-like footage of every excursion with the GoPro HERO 8 sports and helmet camera. Equipped with a 12MP CMOS image sensor and 4K video capability.",
         "inStock": "In Stock",
         "quantity": 700,
-        "lastOrdered": "2019-08-19"
+        "lastOrdered": "2019-08-19",
+        "location": "Toronto, CA",
+        "categories": "electronics, computers, cameras, tv"
       },
       {
         "productId": "01-CANON-YYZ",
@@ -109,7 +129,9 @@
         "description": "Effective 24.1MP CMOS sensor (APS-C format) helps you realize your potential for great photographs.",
         "inStock": "Out of Stock",
         "quantity": 700,
-        "lastOrdered": "2019-08-19"
+        "lastOrdered": "2019-08-19",
+        "location": "Toronto, CA",
+        "categories": "electronics, computers, cameras, tv"
       },
       {
         "productId": "01-SAMSUNG-YYZ",
@@ -117,7 +139,9 @@
         "description": "HDR and PurColor technologies enhance the display with natural colours, while the Crystal Processor 4K fine-tunes the clarity. Its Wi-Fi connectivity helps in streaming your favourite online content.",
         "inStock": "In Stock",
         "quantity": 700,
-        "lastOrdered": "2019-08-19"
+        "lastOrdered": "2019-08-19",
+        "location": "Toronto, CA",
+        "categories": "electronics, computers, cameras, tv"
       },
       {
         "productId": "01-LG-YYZ",
@@ -125,7 +149,9 @@
         "description": "Kick movie night off the right way with this 75 inches LG UHD 4K TV. With a screen that delivers four times the resolution of Full HD, plus a powerful quad-core processor that enhances picture and sound, this TV optimizes your entertainment to pull you right into the action.",
         "inStock": "Out of Stock",
         "quantity": 700,
-        "lastOrdered": "2019-08-19"
+        "lastOrdered": "2019-08-19",
+        "location": "Toronto, CA",
+        "categories": "electronics, computers, cameras, tv"
       },
       {
         "productId": "01-ROOMBA-YYZ",
@@ -133,7 +159,9 @@
         "description": "The Roomba 675 robot vacuum makes it easy to keep your home clean, from anywhere. The patented 3-stage cleaning system is specially engineered to loosen, lift, and suction everything from small particles to large debris from carpets and hard floors.",
         "inStock": "In Stock",
         "quantity": 700,
-        "lastOrdered": "2019-08-19"
+        "lastOrdered": "2019-08-19",
+        "location": "Toronto, CA",
+        "categories": "electronics, computers, cameras, tv"
       },
       {
         "productId": "01-DYSON-YYZ",
@@ -141,7 +169,9 @@
         "description": "The Dyson Cyclone V10 Motorhead Cordless Stick Vacuum offers the suction of a corded vacuum in a cord-free design. Free your house of the dirt, dust, hair, and whatever else your family drags in with the ease and convenience of not having to drag around a huge vacuum.",
         "inStock": "Out of Stock",
         "quantity": 700,
-        "lastOrdered": "2019-08-19"
+        "lastOrdered": "2019-08-19",
+        "location": "Toronto, CA",
+        "categories": "electronics, computers, cameras, tv"
       }
     ]
   },

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import searchIcon from "../assets/Icons/SVG/Icon-search.svg";
 import kebabIcon from "../assets/Icons/SVG/Icon-kebab-default.svg";
 import axios from "axios";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default class Inventory extends Component {
   state = {
@@ -58,19 +58,23 @@ export default class Inventory extends Component {
                   ITEM
                 </label>
                 <div className="inventory__tablet-product">
-                  {/* <Link
-                    to={`/product/${inv.productId}`}
+                  <Link
+                    key={inv.productId}
+                    to={`/inventory/${inv.productId}`}
                     className="inventory__product"
-                  > */}
-                  <p className="inventory__product-name"> {inv.productName} </p>
-                  {/* </Link> */}
+                  >
+                    <p className="inventory__product-name">
+                      {" "}
+                      {inv.productName}{" "}
+                    </p>
+                  </Link>
                   <p className="inventory__shrink">{inv.description}</p>
                 </div>
                 <div className="inventory__tablet-stats">
                   <label className="inventory__mobile">LAST ORDERED</label>
                   <p className="inventory__tablet-right">{inv.lastOrdered}</p>
                   <label className="inventory__mobile">LOCATION</label>
-                  <p className="inventory__tablet-right">Toronto, CAN</p>
+                  <p className="inventory__tablet-right">{inv.location}</p>
                   <label className="inventory__mobile">QUANTITY</label>
                   <p className="inventory__tablet-right">{inv.quantity}</p>
                   <label className="inventory__mobile">STATUS</label>
