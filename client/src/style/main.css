@@ -550,6 +550,57 @@ p {
   }
 }
 
+.add-new {
+  height: 3.75rem;
+  width: 3.75rem;
+  background-color: #004892;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  position: fixed;
+  bottom: 5rem;
+  right: 1.25rem;
+}
+
+.add-new:hover {
+  background-color: #002f5f;
+}
+
+@media (min-width: 768px) {
+  .add-new {
+    right: 5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .add-new {
+    height: 5rem;
+    width: 5rem;
+    right: 16.25rem;
+    bottom: 7.5rem;
+  }
+}
+
+.add-new__img {
+  height: 1.25rem;
+  width: 1.25rem;
+}
+
+@media (min-width: 1440px) {
+  .add-new__img {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+}
+
 .product {
   margin: 40px 1rem 1.5rem;
 }

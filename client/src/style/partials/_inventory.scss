@@ -192,3 +192,45 @@ p {
     width: 10.063rem;
   }
 }
+
+// Add New Item Btn
+
+.add-new {
+  height: 3.75rem;
+  width: 3.75rem;
+
+  background-color: $instock-blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  position: fixed;
+  bottom: 5rem;
+  right: 1.25rem;
+
+  &:hover {
+    background-color: $instock-blue-dark;
+  }
+
+  @include tablet {
+    right: 5rem;
+  }
+
+  @include desktop {
+    height: 5rem;
+    width: 5rem;
+    right: 16.25rem;
+    bottom: 7.5rem;
+  }
+
+  &__img {
+    height: 1.25rem;
+    width: 1.25rem;
+
+    @include desktop {
+      height: 1.5rem;
+      width: 1.5rem;
+    }
+  }
+}
