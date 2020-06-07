@@ -1,6 +1,7 @@
-//Inventory for Mobile
+//Inventory Section for Mobile
+
 label {
-  @include paragraph(0.875rem, 1.375rem);
+  @include paragraph(1rem, 1.375rem);
   color: $silver;
   font-weight: bold;
   margin-bottom: 1rem;
@@ -22,7 +23,7 @@ p {
   }
 
   &__title {
-    @include header(1.5rem, 1.375rem);
+    @include header(1.75rem, 1.375rem);
     padding-bottom: 1rem;
   }
   &__search {
@@ -68,6 +69,7 @@ p {
     color: black;
     font-weight: bold;
     @include subheader(1rem, 1.375rem);
+    cursor: pointer;
   }
 
   &__flex {
@@ -84,7 +86,7 @@ p {
   }
 }
 
-//Inventory for Tablet
+//Inventory Section for Tablet
 @include tablet {
   p,
   label {
@@ -161,7 +163,7 @@ p {
   }
 }
 
-//Inventory for Desktop
+//Inventory Section for Desktop
 @include desktop {
   .inventory {
     padding: 2.5rem 11.25rem;
