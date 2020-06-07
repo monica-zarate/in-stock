@@ -3,6 +3,7 @@ import searchIcon from "../assets/Icons/SVG/Icon-search.svg";
 import kebabIcon from "../assets/Icons/SVG/Icon-kebab-default.svg";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import addBtn from "../assets/Icons/SVG/Icon-add.svg";
 
 export default class Inventory extends Component {
   state = {
@@ -50,6 +51,11 @@ export default class Inventory extends Component {
             </label>
           </div>
         </div>
+        <Link to={`inventory/add_new_item`}>
+          <div className="add-new">
+            <img className="add-new__img" src={addBtn} alt="" />
+          </div>
+        </Link>
         {this.state.inventoryList.map((inv) => {
           return (
             <div className="inventory__container" key={inv.productId}>

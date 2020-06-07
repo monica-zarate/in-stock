@@ -11,6 +11,7 @@ import Header from "./components/Header";
 import Inventory from "./components/Inventory";
 import Locations from "./components/Locations";
 import Products from "./components/Products";
+import CreateNewItem from "./components/CreateNewItem";
 
 import Warehouses from "./components/Warehouses";
 
@@ -27,6 +28,7 @@ function App() {
           <Route path="/product/:id" component={Products} exact />
           <Redirect to="/inventory" from="/" exact />
           <Redirect to="/inventory" from="/product" exact />
+          <Route path="inventory/add_new_item" component={CreateNewItem} />
         </Switch>
       </Router>
     </div>
