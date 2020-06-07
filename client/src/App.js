@@ -10,10 +10,11 @@ import "./style/main.css";
 import Header from "./components/Header";
 import Inventory from "./components/Inventory";
 import Locations from "./components/Locations";
-import Warehouses from "./components/Warehouses";
 
 import "./style/main.css";
 import Products from "./components/Products";
+
+import Warehouses from "./components/Warehouses";
 
 function App() {
   return (
