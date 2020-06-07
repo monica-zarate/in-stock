@@ -1,0 +1,97 @@
+// WAREHOUSE DETAIL //
+.warehouse {
+}
+.warehouse-detail {
+  @extend .container;
+  @include offset;
+  padding: 32px 0 24px 0;
+  &__top-wrapper {
+    display: flex;
+    align-items: center;
+    padding-bottom: 32px;
+  }
+  &__btn {
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+  }
+  &__name {
+    @include header(24px, 32px);
+    margin-left: 16px;
+  }
+  &__text-wrapper {
+    margin: 16px 0;
+  }
+  &__text {
+    &--subheader {
+      @include paragraph(14px, 24px);
+      color: $silver;
+    }
+    &--address,
+    &--name,
+    &--position,
+    &--number,
+    &--email {
+      width: 138px;
+      margin: 0;
+      @include paragraph(14px, 20px);
+    }
+  }
+}
+
+// WAREHOUSE DETAIL FOR TABLET //
+@include tablet {
+  .warehouse-detail {
+    &__info-wrapper {
+      display: flex;
+    }
+    &__top-wrapper {
+      padding-bottom: 32px;
+      border-bottom: 2px solid $mercury;
+    }
+    &__info-wrapper {
+      padding-top: 32px;
+    }
+    &__address-wrapper,
+    &__contact-wrapper {
+      width: 50%;
+    }
+    &__name {
+      @include header(36px, 44px);
+    }
+  }
+}
+
+// PRODUCT LIST //
+.warehouse-product {
+  background: $alabaster;
+  padding: 24px 0;
+}
+.warehouse-product-list {
+  @include offset;
+  padding: 0;
+  &__item {
+    padding-top: 16px;
+  }
+  &__text {
+    &--label {
+      @include paragraph(14px, 24px);
+      color: $silver;
+    }
+    &--product-name {
+      @include subheader(14px, 24px);
+      margin: 0;
+    }
+    &--para {
+      @include paragraph(14px, 24px);
+      margin: 0;
+    }
+  }
+  &__btn {
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+  }
+}
