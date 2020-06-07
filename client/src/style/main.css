@@ -297,7 +297,7 @@ li {
 
 label {
   font-family: "Avenir Next Regular";
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1.375rem;
   color: #afafaf;
   font-weight: bold;
@@ -326,7 +326,7 @@ p {
 
 .inventory__title {
   font-family: "Avenir Next Bold";
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   line-height: 1.375rem;
   padding-bottom: 1rem;
 }
@@ -396,6 +396,7 @@ p {
   font-family: "Avenir Next Demi Bold";
   font-size: 1rem;
   line-height: 1.375rem;
+  cursor: pointer;
 }
 
 .inventory__flex {
@@ -546,6 +547,138 @@ p {
   }
   .kebab {
     width: 10.063rem;
+  }
+}
+
+.product {
+  margin: 40px 1rem 1.5rem;
+}
+
+.product__container {
+  width: 100%;
+  margin: auto;
+}
+
+.product__label-page {
+  font-family: "Avenir Next Bold";
+  font-size: 1.75rem;
+  line-height: auto;
+  margin-bottom: 24px;
+}
+
+.product__instock-status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100px;
+  height: 30px;
+  background-color: #267a26;
+  border-radius: 5px;
+}
+
+.product__instock-status-text {
+  color: #ffffff;
+  font-family: "Avenir Next Regular";
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+  margin-bottom: 0;
+}
+
+.product__hr {
+  visibility: hidden;
+}
+
+.product__label-description, .product__label-last-ordered, .product__label-location, .product__label-quantity, .product__label-categories {
+  font-family: "Avenir Next Regular";
+  font-size: 1rem;
+  line-height: 1.375rem;
+  color: #afafaf;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+.product__item-description, .product__categories {
+  width: 90%;
+}
+
+.product__categories {
+  margin-bottom: 40px;
+}
+
+.product p {
+  font-family: "Avenir Next Regular";
+  font-size: 0.9rem;
+  line-height: 1.125rem;
+}
+
+.product__edit-btn {
+  width: 288px;
+  height: 60px;
+  border-radius: 4px;
+  border: 1px solid #002f5f;
+  background-color: #002f5f;
+  color: #ffffff;
+  font-family: "Avenir Next Regular";
+  font-size: 1rem;
+  line-height: 1.125rem;
+}
+
+@media (min-width: 768px) {
+  .product__container {
+    width: 720px;
+  }
+  .product__instock-status {
+    margin-top: 25px;
+  }
+  .product__header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .product__label-page {
+    margin-right: 24px;
+  }
+  .product__hr {
+    visibility: visible;
+  }
+  .product__btn-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .product__edit-btn {
+    margin-top: 40px;
+    width: 288px;
+  }
+  .product__info-details {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 360px 360px;
+        grid-template-columns: 360px 360px;
+  }
+  .product__label-value-container {
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 1440px) {
+  .product__container {
+    width: 1080px;
+  }
+  .product__description-details-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
   }
 }
 

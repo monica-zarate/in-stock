@@ -8,7 +8,7 @@ export default class Products extends Component {
   componentDidMount() {
     const id = this.props.match.params.id;
     axios
-      .get("http://localhost:5000/product/:id")
+      .get("http://localhost:5000/inventory")
       .then((response) => {
         const res = response.data.filter((item) => {
           return item.productId === id;
@@ -24,13 +24,13 @@ export default class Products extends Component {
       <div className="product">
         {this.state.product.map((item) => {
           return (
-            <div className="product__container" id={item.productId}>
+            <div className="product__container" key={item.productId}>
               <div className="product__header">
                 <h1 className="product__label-page">{item.productName}</h1>
-                <div className="product__instock-notifier">
-                  <p className="product__instock-notifier-text">
+                <div className="product__instock-status">
+                  <span className="product__instock-status-text">
                     {item.inStock}
-                  </p>
+                  </span>
                 </div>
               </div>
               <hr className="product__hr"></hr>

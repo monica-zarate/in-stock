@@ -1,0 +1,137 @@
+//Product Section for Mobile
+.product {
+  margin: 40px 1rem 1.5rem;
+
+  &__container {
+    width: 100%;
+    margin: auto;
+  }
+
+  &__label-page {
+    @include header(1.75rem, auto);
+    margin-bottom: 24px;
+  }
+
+  &__instock-status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 30px;
+    background-color: rgb(38, 122, 38);
+    border-radius: 5px;
+  }
+
+  &__instock-status-text {
+    color: $white;
+    @include paragraph(0.813rem, 1.125rem);
+    margin-bottom: 0;
+  }
+
+  &__hr {
+    visibility: hidden;
+  }
+
+  &__label-description {
+    @include paragraph(1rem, 1.375rem);
+    color: $silver;
+    margin-top: 24px;
+    margin-bottom: 16px;
+  }
+
+  &__item-description {
+    width: 90%;
+  }
+
+  &__label-last-ordered {
+    @extend .product__label-description;
+  }
+
+  &__label-location {
+    @extend .product__label-description;
+  }
+
+  &__label-quantity {
+    @extend .product__label-description;
+  }
+
+  &__label-categories {
+    @extend .product__label-description;
+  }
+
+  &__categories {
+    @extend .product__item-description;
+    margin-bottom: 40px;
+  }
+
+  p {
+    @include paragraph(0.9rem, 1.125rem);
+  }
+
+  &__edit-btn {
+    width: 288px;
+    height: 60px;
+    border-radius: 4px;
+    border: 1px solid $instock-blue-dark;
+    background-color: $instock-blue-dark;
+    color: $white;
+    @include paragraph(1rem, 1.125rem);
+  }
+}
+
+//Product Section for Tablet
+@include tablet {
+  .product {
+    &__container {
+      width: 720px;
+    }
+
+    &__instock-status {
+      margin-top: 25px;
+    }
+
+    &__header {
+      display: flex;
+    }
+
+    &__label-page {
+      margin-right: 24px;
+    }
+
+    &__hr {
+      visibility: visible;
+    }
+
+    &__btn-container {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    &__edit-btn {
+      margin-top: 40px;
+      width: 288px;
+    }
+
+    &__info-details {
+      display: grid;
+      grid-template-columns: 360px 360px;
+    }
+
+    &__label-value-container {
+      margin-right: auto;
+    }
+  }
+}
+
+//Product Section for Desktop
+@include desktop {
+  .product {
+    &__container {
+      width: 1080px;
+    }
+    &__description-details-container {
+      display: grid;
+      grid-template-columns: 50% 50%;
+    }
+  }
+}
