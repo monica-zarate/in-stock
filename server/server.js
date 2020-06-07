@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const fs = require("fs");
 
-// Importing getItem controller
+// Importing getItems and getWh controllers
 const getItems = require("./controller/getItems");
 const getWh = require("./controller/getWh");
 
@@ -12,7 +12,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-// Get and Post Item Details
+// Get, Post, Put and Delete Items Details
 
 app
   .route("/inventory")
@@ -29,6 +29,7 @@ app
       inStock: req.body.inStock,
       quantity: req.body.quantity,
       lastOrdered: req.body.lastOrdered,
+      categories: req.body.categories,
     };
     console.log(warehouseId);
     let warehouse = warehouseArray.filter((wh) => wh.id === warehouseId)[0];
@@ -50,6 +51,7 @@ app
           productsArray[j].inStock = req.body.inStock;
           productsArray[j].quantity = req.body.quantity;
           productsArray[j].lastOrdered = req.body.lastOrdered;
+          productsArray[j].categories = req.body.categories;
         }
       }
     }
