@@ -932,6 +932,7 @@ p {
   padding: 32px 0 24px 0;
   margin: 0;
   border-bottom: 2px solid #e1e1e1;
+  position: relative;
 }
 
 .warehouse-list__item {
@@ -959,16 +960,18 @@ p {
   margin: 0;
 }
 
-.warehouse-list__warehouse-wrapper {
-  position: relative;
-}
-
 .warehouse-list__btn {
   position: absolute;
+  top: 48px;
+  right: 0;
   border: none;
   background: transparent;
   padding: 0;
   cursor: pointer;
+}
+
+.warehouse-list__img:hover, .warehouse-list__img:active {
+  fill: #323232;
 }
 
 @media (min-width: 768px) {
@@ -1017,9 +1020,6 @@ p {
   }
   .warehouse-list__warehouse-wrapper, .warehouse-list__contact-wrapper, .warehouse-list__contact-info-wrapper, .warehouse-list__categories-wrapper {
     width: 184px;
-  }
-  .warehouse-list__btn {
-    display: none;
   }
 }
 
@@ -1114,6 +1114,7 @@ p {
 .warehouse-product-list {
   margin: 0 16px;
   padding: 0;
+  position: relative;
 }
 
 @media (min-width: 768px) {
@@ -1154,6 +1155,9 @@ p {
 }
 
 .warehouse-product-list__btn {
+  position: absolute;
+  top: 16px;
+  right: 0;
   border: none;
   background: transparent;
   padding: 0;
