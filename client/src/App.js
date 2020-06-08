@@ -28,7 +28,7 @@ function App() {
           <Route path="/product/:id" component={Products} exact />
           <Redirect to="/inventory" from="/" exact />
           <Redirect to="/inventory" from="/product" exact />
-          <Route path="inventory/add_new_item" component={CreateNewItem} />
+          <Route path="/inventory/add_new_item" component={CreateNewItem} />
         </Switch>
       </Router>
     </div>

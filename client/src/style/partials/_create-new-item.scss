@@ -1,0 +1,87 @@
+.new-item {
+  padding: 2rem 1rem;
+
+  &__title {
+    @include header(1.5rem, 2rem);
+    margin: 0 0 0.5rem 0;
+  }
+
+  &__input-wrapper {
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  &__input {
+    width: 100%;
+    position: relative;
+    &--title {
+      @include subheader(0.75rem, 0.75rem);
+      color: $silver;
+      margin: 1.5rem 0 0.5rem 0;
+    }
+
+    &--content,
+    &--content-text,
+    &--content-select {
+      width: 100%;
+      height: 3rem;
+      border-style: none;
+      border: 1px solid $silver;
+      border-radius: 2px;
+      background-color: $alabaster;
+      color: $black;
+      @include paragraph(1rem, 0.75rem);
+      padding: 0.5rem 1rem;
+      outline: none;
+      &:focus {
+        border: 1px solid $black;
+      }
+    }
+
+    &--content-text {
+      resize: none;
+      height: 5rem;
+    }
+    &--content-select {
+      background-image: url("/icons/drop-up.svg"), url("/icons/drop-down.svg");
+      background-position: top 5px right 1rem, bottom 5px right 1rem;
+      appearance: none;
+      background-repeat: no-repeat;
+      background-size: 1.75rem;
+    }
+  }
+
+  &__cta {
+    display: flex;
+    flex-wrap: wrap;
+    &--save {
+      margin: 1.5rem 0 0 0;
+      width: 100%;
+      background-color: $instock-blue;
+      color: $alabaster;
+      border-style: none;
+      height: 3rem;
+      padding: 0;
+      border-radius: 4px;
+      @include subheader(1rem, 1rem);
+      &:hover {
+        background-color: $instock-blue-dark;
+      }
+    }
+    &--cancel {
+      margin: 1rem 0 0 0;
+      width: 100%;
+      border-style: none;
+      height: 3rem;
+      padding: 0;
+      color: $instock-blue;
+      @include subheader(1rem, 1rem);
+      background-color: $white;
+    }
+  }
+}
