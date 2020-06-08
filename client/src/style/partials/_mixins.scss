@@ -22,7 +22,7 @@
   width: 252px;
   border: 1px solid $mercury;
   border-radius: 2px;
-  &:active {
+  &:focus {
     border: 1px solid $black;
   }
 }
