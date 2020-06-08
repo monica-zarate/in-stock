@@ -616,6 +616,19 @@ p {
 
 .new-item {
   padding: 2rem 1rem;
+  max-width: 18rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .new-item {
+    max-width: unset;
+    width: 36rem;
+    height: 40.5rem;
+    border-radius: 4px;
+    border: 1px solid #323232;
+    padding: 3.5rem 3rem 2.5rem 3rem;
+  }
 }
 
 .new-item__title {
@@ -623,6 +636,14 @@ p {
   font-size: 1.5rem;
   line-height: 2rem;
   margin: 0 0 0.5rem 0;
+}
+
+@media (min-width: 768px) {
+  .new-item__title {
+    font-family: "Avenir Next Bold";
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+  }
 }
 
 .new-item__list {
@@ -636,9 +657,29 @@ p {
   margin: 0;
 }
 
+@media (min-width: 768px) {
+  .new-item__list {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 .new-item__input {
   width: 100%;
   position: relative;
+}
+
+@media (min-width: 768px) {
+  .new-item__input {
+    width: 13.75rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .new-item__input:last-child {
+    width: 100%;
+  }
 }
 
 .new-item__input--title {
@@ -687,8 +728,21 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  max-width: 18rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .new-item__cta {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
 }
 
 .new-item__cta--save {
@@ -709,6 +763,13 @@ p {
   background-color: #002f5f;
 }
 
+@media (min-width: 768px) {
+  .new-item__cta--save {
+    width: 10rem;
+    margin: 2.5rem 0 0 0;
+  }
+}
+
 .new-item__cta--cancel {
   margin: 1rem 0 0 0;
   width: 100%;
@@ -720,6 +781,13 @@ p {
   font-size: 1rem;
   line-height: 1rem;
   background-color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .new-item__cta--cancel {
+    width: 4rem;
+    margin: 2.5rem 3rem 0 0;
+  }
 }
 
 .product {
