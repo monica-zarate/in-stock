@@ -71,6 +71,7 @@
 .warehouse-product-list {
   @include offset;
   padding: 0;
+  position: relative;
   &__item {
     padding-top: 16px;
   }
@@ -89,6 +90,9 @@
     }
   }
   &__btn {
+    position: absolute;
+    top: 16px;
+    right: 0;
     border: none;
     background: transparent;
     padding: 0;

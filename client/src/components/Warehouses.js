@@ -63,6 +63,13 @@ class WarehouseDetail extends Component {
                 Here is a very brief description of the product in the
                 inventory...
               </p>
+              <button className="warehouse-product-list__btn">
+                <img
+                  src={KebabIcon}
+                  alt="Kebab Icon"
+                  className="warehouse-detail__img"
+                />
+              </button>
             </li>
             <li className="warehouse-product-list__item">
               <span className="warehouse-product-list__text--label">
@@ -87,17 +94,6 @@ class WarehouseDetail extends Component {
                 STATUS
               </span>
               <p className="warehouse-product-list__text--para">In Stock</p>
-            </li>
-            <li className="warehouse-product-list__item">
-              <Link to="" className="warehouse-product-list__link">
-                <button className="warehouse-product-list__btn">
-                  <img
-                    src={KebabIcon}
-                    alt="Kebab Icon"
-                    className="warehouse-detail__img"
-                  />
-                </button>
-              </Link>
             </li>
           </ul>
         </div>

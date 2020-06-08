@@ -66,7 +66,11 @@ class Locations extends Component {
                     className="warehouse-list__link"
                   >
                     <button className="warehouse-list__btn">
-                      <img src={ArrowRight} alt="Arrow Right" />
+                      <img
+                        src={ArrowRight}
+                        alt="Arrow Right"
+                        className="warehouse-list__img"
+                      />
                     </button>
                   </Link>
                 </div>
