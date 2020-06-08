@@ -84,6 +84,16 @@ p {
     padding-right: 0.25rem;
     height: 0;
   }
+
+  &__remove {
+    width: 156px;
+    padding: 15px;
+    right: 20px;
+    position: absolute;
+    background-color: $alabaster;
+    border: 1px solid $mercury;
+    border-radius: 4px;
+  }
 }
 
 //Inventory Section for Tablet
@@ -186,6 +196,9 @@ p {
       &-right {
         width: 10.5625rem;
       }
+    }
+    &__remove {
+      right: 180px;
     }
   }
   .kebab {
