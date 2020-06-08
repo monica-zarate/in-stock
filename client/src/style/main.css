@@ -979,6 +979,10 @@ p {
   cursor: pointer;
 }
 
+.warehouse-list__btn:focus {
+  outline: none;
+}
+
 .warehouse-list__img:hover, .warehouse-list__img:active {
   fill: #323232;
 }
@@ -1064,6 +1068,10 @@ p {
   background: transparent;
   padding: 0;
   cursor: pointer;
+}
+
+.warehouse-detail__btn:focus {
+  outline: none;
 }
 
 .warehouse-detail__name {
@@ -1180,5 +1188,9 @@ p {
   background: transparent;
   padding: 0;
   cursor: pointer;
+}
+
+.warehouse-product-list__btn:focus {
+  outline: none;
 }
 /*# sourceMappingURL=main.css.map */

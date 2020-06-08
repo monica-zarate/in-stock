@@ -15,6 +15,9 @@
     background: transparent;
     padding: 0;
     cursor: pointer;
+    &:focus {
+      outline: none;
+    }
   }
   &__name {
     @include header(24px, 32px);
@@ -102,5 +105,8 @@
     background: transparent;
     padding: 0;
     cursor: pointer;
+    &:focus {
+      outline: none;
+    }
   }
 }
