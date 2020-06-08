@@ -28,7 +28,11 @@
       @include paragraph(14px, 24px);
       color: $silver;
     }
-    &--address,
+    &--address {
+      width: 138px;
+      margin: 0;
+      @include paragraph(14px, 20px);
+    }
     &--name,
     &--position,
     &--number,
@@ -36,6 +40,7 @@
       width: 138px;
       margin: 0;
       @include paragraph(14px, 20px);
+      font-style: italic;
     }
   }
 }

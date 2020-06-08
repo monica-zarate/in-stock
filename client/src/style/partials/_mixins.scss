@@ -10,13 +10,21 @@
 }
 
 @mixin search-box {
-  @include subheader(14px, 22px);
+  @include paragraph(14px, 22px);
+  background: url("/icons/Icon-search.svg");
+  background-repeat: no-repeat;
   background-color: $alabaster;
+  background-position-x: 12px;
+  background-position-y: 12px;
   resize: none;
+  padding-left: 40px;
   height: 46px;
   width: 252px;
-  border: 2px solid $mercury;
-  border-radius: 4px;
+  border: 1px solid $mercury;
+  border-radius: 2px;
+  &:active {
+    border: 1px solid $black;
+  }
 }
 
 @mixin responsive {
