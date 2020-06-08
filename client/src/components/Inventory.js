@@ -21,6 +21,19 @@ export default class Inventory extends Component {
       .catch((err) => console.log(err));
   }
 
+  removeClick = () => {
+    axios
+      .delete("http://localhost:5000/product/:id")
+      .then(this.props.getInventoryList)
+      .catch((err) => console.log(err));
+  };
+
+  kebabClick = (event) => {
+    this.state.hide
+      ? this.setState({ hide: false })
+      : this.setState({ hide: true });
+  };
+
   render() {
     return (
       <div className="inventory">
@@ -88,7 +101,23 @@ export default class Inventory extends Component {
                 </div>
               </div>
               <div className="inventory__options">
-                <img src={kebabIcon} alt="Kebab Icon" />
+                <img
+                  src={kebabIcon}
+                  alt="Kebab Icon"
+                  onClick={this.kebabClick}
+                />
+                {this.state.hide ? (
+                  <div
+                    className="inventory__remove"
+                    onClick={this.removeClick}
+                    onMouseOut={this.kebabClick}
+                  >
+                    {" "}
+                    Remove{" "}
+                  </div>
+                ) : (
+                  ""
+                )}
               </div>
             </div>
           );
