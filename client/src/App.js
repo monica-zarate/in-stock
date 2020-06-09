@@ -17,21 +17,23 @@ import WarehouseDetail from "./components/WarehouseDetail";
 
 function App() {
   return (
-    <div className="App">
-      <Router>
-        <Header />
-        <Redirect from="/" to="/inventory" />
-        <Switch>
-          <Route path="/inventory" component={Inventory} exact />
-          <Route path="/warehouses" component={Warehouses} exact />
-          <Route path="/warehouse/:id" component={WarehouseDetail} />
-          <Route path="/product/:id" component={Products} exact />
-          <Redirect to="/inventory" from="/" exact />
-          <Redirect to="/inventory" from="/product" exact />
-          <Route path="/inventory/add_new_item" component={CreateNewItem} />
-        </Switch>
-      </Router>
-    </div>
+    <>
+      <div className="App">
+        <Router>
+          <Header />
+          <Redirect from="/" to="/inventory" />
+          <Switch>
+            <Route path="/inventory" component={Inventory} exact />
+            <Route path="/warehouses" component={Warehouses} exact />
+            <Route path="/warehouse/:id" component={WarehouseDetail} />
+            <Route path="/product/:id" component={Products} exact />
+            <Redirect to="/inventory" from="/" exact />
+            <Redirect to="/inventory" from="/product" exact />
+          </Switch>
+        </Router>
+        <CreateNewItem />
+      </div>
+    </>
   );
 }
 export default App;
