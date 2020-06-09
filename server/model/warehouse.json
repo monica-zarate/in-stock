@@ -196,5 +196,28 @@
     "email": "calgarymanager@brainstation.io",
     "categories": "electronics, computers, cameras, tv",
     "products": []
+  },
+  {
+    "id": 4,
+    "name": "Name",
+    "location": "Calgary, CA",
+    "address": "adddress",
+    "contactName": "This is contact",
+    "position": "position",
+    "phoneNumber": "phone",
+    "email": "email",
+    "categories": "categorie",
+    "products": [
+      {
+        "productId": "e8ac0c95-fbd4-4356-b62d-24adf959a620",
+        "productName": "Item2",
+        "description": "description",
+        "inStock": "In Stock",
+        "quantity": "25",
+        "lastOrdered": "ordered",
+        "location": "Calgary, CA",
+        "categories": ""
+      }
+    ]
   }
 ]

@@ -30,6 +30,7 @@ export default class CreateNewItem extends Component {
   closeModal = (event) => {
     let newItemObject = document.getElementsByClassName("new-item")[0];
     newItemObject.style.display = "none";
+    this.clearForm();
   };
   saveItem = (event) => {
     let productName = document.getElementById("productName").value;
@@ -55,6 +56,13 @@ export default class CreateNewItem extends Component {
         console.log(error);
       });
   };
+  clearForm() {
+    document.getElementById("productName").value = "";
+    document.getElementById("checkbox").checked = false;
+    document.getElementById("description").value = "";
+    document.getElementById("lastOrdered").value = "";
+    document.getElementById("quantity").value = "";
+  }
   render() {
     return (
       <div className="new-item">

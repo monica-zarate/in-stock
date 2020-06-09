@@ -108,9 +108,10 @@ app
   })
   .post((req, res) => {
     const warehouseArray = getWh();
+    let newId = warehouseArray.length + 1;
     const warehouseObject = {
-      id: req.body.id,
-      name: req.body.name,
+      id: newId,
+      name: req.body.wareHouseName,
       location: req.body.location,
       address: req.body.address,
       contactName: req.body.contactName,
