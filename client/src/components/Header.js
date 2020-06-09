@@ -9,30 +9,6 @@ export default class Header extends React.Component {
     this.locationHeader = React.createRef();
   }
 
-  // componentDidMount = () => {
-  // // handle active page underline for the header
-  //   const inventory__header = document.getElementsByClassName(
-  //     "inventory__header"
-  //   );
-  //   const location__header = document.getElementsByClassName(
-  //     "location__header"
-  //   );
-
-
-    //if locations page, underline location option
-    if (window.location.pathname === "/warehouses") {
-      location__header[0].classList.add("active");
-      inventory__header[0].classList.remove("active");
-    } else {
-      //else underline the inventory
-      inventory__header[0].classList.add("active");
-      location__header[0].classList.remove("active");
-    }
-  };
-
-
-  // Do I need to do a componentDidUpdate?
-
   render() {
     return (
       <>
@@ -55,11 +31,9 @@ export default class Header extends React.Component {
               ref={this.locationHeader}
               className="navigation__options location__header"
             >
-
-              <Link to="/warehouses" className="navigation__link">
-
+              <NavLink to="/warehouses" className="navigation__link">
                 <h2 className="navigation__options-text">Locations</h2>
-              </Link>
+              </NavLink>
             </div>
           </nav>
         </header>
