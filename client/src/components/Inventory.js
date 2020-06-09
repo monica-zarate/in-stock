@@ -34,6 +34,11 @@ export default class Inventory extends Component {
       : this.setState({ hide: true });
   };
 
+  newItemClick = (event) => {
+    let newItemObject = document.getElementsByClassName("new-item")[0];
+    newItemObject.style.display = "block";
+  };
+
   render() {
     return (
       <div className="inventory">
@@ -64,11 +69,10 @@ export default class Inventory extends Component {
             </label>
           </div>
         </div>
-        <Link to={`inventory/add_new_item`}>
-          <div className="add-new">
-            <img className="add-new__img" src={addBtn} alt="" />
-          </div>
-        </Link>
+        <div className="add-new" onClick={this.newItemClick}>
+          <img className="add-new__img" src={addBtn} alt="" />
+        </div>
+
         {this.state.inventoryList.map((inv) => {
           return (
             <div className="inventory__container" key={inv.productId}>
