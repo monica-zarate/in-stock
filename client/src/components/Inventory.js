@@ -21,10 +21,10 @@ export default class Inventory extends Component {
       .catch((err) => console.log(err));
   }
 
-  removeClick = () => {
+  removeClick = (id) => {
     axios
-      .delete("http://localhost:5000/product/:id")
-      .then(this.props.getInventoryList)
+      .delete(`http://localhost:5000/inventory/${id}`)
+      .then(this.setState.inventoryList)
       .catch((err) => console.log(err));
   };
 
@@ -109,7 +109,7 @@ export default class Inventory extends Component {
                 {this.state.hide ? (
                   <div
                     className="inventory__remove"
-                    onClick={this.removeClick}
+                    onClick={() => this.removeClick(inv.productId)}
                     onMouseOut={this.kebabClick}
                   >
                     {" "}
