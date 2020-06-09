@@ -17,8 +17,7 @@ export default class CreateNewItem extends Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:5000/locations")
-
+      .get(`/warehouses`)
       .then((response) => {
         this.setState({
           locations: response.data,
@@ -48,7 +47,7 @@ export default class CreateNewItem extends Component {
       quantity: quantity,
     };
     axios
-      .post("http://localhost:5000/inventory", newItemRequest)
+      .post("/inventory", newItemRequest)
       .then((response) => {
         this.closeModal();
       })

@@ -10,7 +10,7 @@ export default class CreateNewLocation extends Component {
   }
   componentDidMount() {
     axios
-      .get("http://localhost:5000/locations")
+      .get("/warehouses")
       .then((response) => {
         this.setState({
           locations: response.data,
@@ -44,7 +44,7 @@ export default class CreateNewLocation extends Component {
       categories: categories,
     };
     axios
-      .post("http://localhost:5000/locations", newWarehouse)
+      .post("/warehouses", newWarehouse)
       .then((response) => {
         this.closeModal();
       })

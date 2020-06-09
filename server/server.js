@@ -3,9 +3,10 @@ const cors = require("cors");
 const fs = require("fs");
 const { v4: uuidv4 } = require("uuid");
 
-// Importing getItems and getWh controllers
+// Importing controllers
 const getItems = require("./controller/getItems");
 const getWh = require("./controller/getWh");
+const getWhDetail = require("./controller/getWhDetail");
 
 // Const App to use express method
 const app = express();
@@ -102,7 +103,7 @@ app.delete("/inventory/:id", (req, res) => {
 // Get and Post Warehouse Details
 
 app
-  .route("/locations")
+  .route("/warehouses")
   .get((req, res) => {
     res.json(getWh());
   })
@@ -125,6 +126,12 @@ app
     fs.writeFileSync("./model/warehouse.json", JSON.stringify(warehouseArray));
     res.json(warehouseArray);
   });
+
+// Dynamic path using an id as a param
+app.get("/warehouses/:id", (req, res) => {
+  const whId = req.params.id;
+  res.json(getWhDetail(whId));
+});
 
 // Local Host
 app.listen(5000, console.log("app is listening at: http://localhost:5000"));

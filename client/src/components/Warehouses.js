@@ -1,27 +1,10 @@
 import React, { Component } from "react";
-import axios from "axios";
 import { Link } from "react-router-dom";
 
 import ArrowRight from "../assets/Icons/SVG/Icon-arrow-right.svg";
 import addBtn from "../assets/Icons/SVG/Icon-add.svg";
 
 class Warehouses extends Component {
-  state = {
-    warehouseList: [],
-    warehouseDetail: {},
-  };
-
-  componentDidMount() {
-    axios
-      .get("http://localhost:5000/locations")
-      .then((response) => {
-        this.setState({
-          warehouseList: response.data,
-        });
-      })
-      .catch((error) => console.log(error));
-  }
-
   newItemClick = (event) => {
     let newItemObject = document.getElementsByClassName("new-location")[0];
     newItemObject.style.display = "block";
@@ -55,7 +38,7 @@ class Warehouses extends Component {
             <span className="location__labels--text">CATEGORIES</span>
           </li>
         </ul>
-        {this.state.warehouseList.map((warehouse) => {
+        {this.props.warehouses.map((warehouse) => {
           return (
             <ul className="warehouse-list">
               <li className="warehouse-list__item">
@@ -69,7 +52,7 @@ class Warehouses extends Component {
                   </p>
                   <Link
                     key={warehouse.id}
-                    to={`/warehouse/${warehouse.id}`}
+                    to={`/warehouses/${warehouse.id}`}
                     className="warehouse-list__link"
                   >
                     <button className="warehouse-list__btn">

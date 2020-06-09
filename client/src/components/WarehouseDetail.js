@@ -3,7 +3,29 @@ import { Link } from "react-router-dom";
 import BackArrow from "../assets/Icons/SVG/Icon-back-arrow.svg";
 import KebabIcon from "../assets/Icons/SVG/Icon-kebab-default.svg";
 class WarehouseDetail extends Component {
+  componentDidUpdate(prevProps) {
+    const oldWarehouseId = prevProps.match.params.id;
+    const newWarehouseId = this.props.match.params.id;
+
+    if (newWarehouseId !== oldWarehouseId) {
+      this.getWarehouseDetail(newWarehouseId);
+    }
+  }
   render() {
+    const {
+      id,
+      name,
+      address,
+      location,
+      contactName,
+      position,
+      email,
+      phoneNumber,
+    } = this.props.warehouse;
+
+    if (id === undefined) {
+      return <p>Loading</p>;
+    }
     return (
       <div className="warehouse">
         <div className="warehouse-detail">
@@ -17,37 +39,29 @@ class WarehouseDetail extends Component {
                 />
               </button>
             </Link>
-            <span className="warehouse-detail__name">Warehouse Name</span>
+            <span className="warehouse-detail__name">{name}</span>
           </div>
           <div className="warehouse-detail__info-wrapper">
             <div className="warehouse-detail__address-wrapper">
               <span className="warehouse-detail__text--subheader">ADDRESS</span>
               <div className="warehouse-detail__text-wrapper">
-                <p className="warehouse-detail__text--address">
-                  123 Main Street W.
-                </p>
-                <p className="warehouse-detail__text--address">Suite 201</p>
+                <p className="warehouse-detail__text--address">{address}</p>
+                <p className="warehouse-detail__text--address">{address}</p>
               </div>
               <div className="warehouse-detail__text-wrapper">
-                <p className="warehouse-detail__text--address">Toronto, ON</p>
-                <p className="warehouse-detail__text--address">M65GB7 CA</p>
+                <p className="warehouse-detail__text--address">{location}</p>
+                <p className="warehouse-detail__text--address">{location}</p>
               </div>
             </div>
             <div className="warehouse-detail__contact-wrapper">
               <span className="warehouse-detail__text--subheader">CONTACT</span>
               <div className="warehouse-detail__text-wrapper">
-                <p className="warehouse-detail__text--name">Mara Weinberg</p>
-                <p className="warehouse-detail__text--position">
-                  Warehouse Manager
-                </p>
+                <p className="warehouse-detail__text--name">{contactName}</p>
+                <p className="warehouse-detail__text--position">{position}</p>
               </div>
               <div className="warehouse-detail__text-wrapper">
-                <p className="warehouse-detail__text--number">
-                  +1 416 678 2345
-                </p>
-                <p className="warehouse-detail__text--email">
-                  weinberg@instock.com
-                </p>
+                <p className="warehouse-detail__text--number">{phoneNumber}</p>
+                <p className="warehouse-detail__text--email">{email}</p>
               </div>
             </div>
           </div>
