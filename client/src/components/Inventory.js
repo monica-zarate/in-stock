@@ -24,7 +24,7 @@ export default class Inventory extends Component {
   removeClick = (id) => {
     axios
       .delete(`http://localhost:5000/inventory/${id}`)
-      .then(this.setState.inventoryList)
+      .then(window.location.reload(false))
       .catch((err) => console.log(err));
   };
 
