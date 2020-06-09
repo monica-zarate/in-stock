@@ -1145,20 +1145,7 @@ p {
 }
 
 .warehouse-detail {
-  margin: 0 16px;
-  padding: 32px 0 24px 0;
-}
-
-@media (min-width: 768px) {
-  .warehouse-detail {
-    margin: 0 24px;
-  }
-}
-
-@media (min-width: 1440px) {
-  .warehouse-detail {
-    margin: 0 180px;
-  }
+  padding: 32px 16px 24px;
 }
 
 .warehouse-detail__top-wrapper {
@@ -1209,7 +1196,6 @@ p {
 }
 
 .warehouse-detail__text--position, .warehouse-detail__text--number, .warehouse-detail__text--email {
-  width: 138px;
   margin: 0;
   font-family: "Avenir Next Regular";
   font-size: 14px;
@@ -1218,6 +1204,13 @@ p {
 }
 
 @media (min-width: 768px) {
+  .warehouse {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+  .warehouse-detail {
+    padding: 48px 24px;
+  }
   .warehouse-detail__info-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1242,25 +1235,13 @@ p {
 
 .warehouse-product {
   background: #fafafa;
-  padding: 24px 0;
 }
 
 .warehouse-product-list {
-  margin: 0 16px;
-  padding: 0;
+  margin: 0;
+  padding: 24px 16px;
   position: relative;
-}
-
-@media (min-width: 768px) {
-  .warehouse-product-list {
-    margin: 0 24px;
-  }
-}
-
-@media (min-width: 1440px) {
-  .warehouse-product-list {
-    margin: 0 180px;
-  }
+  border-bottom: 2px solid #e1e1e1;
 }
 
 .warehouse-product-list__item {
@@ -1285,12 +1266,16 @@ p {
   font-family: "Avenir Next Regular";
   font-size: 14px;
   line-height: 24px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   margin: 0;
 }
 
 .warehouse-product-list__btn {
   position: absolute;
-  top: 16px;
+  margin-right: 16px;
+  top: 40px;
   right: 0;
   border: none;
   background: transparent;
@@ -1300,6 +1285,82 @@ p {
 
 .warehouse-product-list__btn:focus {
   outline: none;
+}
+
+@media (min-width: 768px) {
+  .warehouse {
+    max-width: 768px;
+  }
+  .warehouse-detail {
+    padding: 48px 24px;
+  }
+  .warehouse-product {
+    padding: 24px 24px;
+  }
+  .warehouse-product-list {
+    padding: 24px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .warehouse-product-list:first-child .warehouse-product-list__text--label {
+    display: block;
+  }
+  .warehouse-product-list:first-child .warehouse-product-list__text-wrapper {
+    position: relative;
+  }
+  .warehouse-product-list:first-child .warehouse-product-list__btn {
+    position: absolute;
+    top: 88px;
+  }
+  .warehouse-product-list__text--label {
+    font-family: "Avenir Next Regular";
+    font-size: 14px;
+    line-height: 24px;
+    color: #afafaf;
+    display: none;
+  }
+  .warehouse-product-list__item:first-child {
+    width: 224px;
+  }
+  .warehouse-product-list__item {
+    width: 120px;
+  }
+  .warehouse-product-list__text-wrapper {
+    margin-top: 24px;
+    position: relative;
+  }
+  .warehouse-product-list__btn {
+    position: absolute;
+    top: 64px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .warehouse {
+    max-width: 1440px;
+  }
+  .warehouse-detail {
+    padding: 48px 180px;
+  }
+  .warehouse-product {
+    padding: 24px 180px;
+  }
+}
+
+.delete-btn {
+  display: none;
+  position: absolute;
+}
+
+.btn-active .delete-btn {
+  display: block;
 }
 
 .new-location {

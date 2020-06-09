@@ -40,19 +40,18 @@ class Warehouses extends Component {
         </ul>
         {this.props.warehouses.map((warehouse) => {
           return (
-            <ul className="warehouse-list">
+            <ul key={warehouse.id} className="warehouse-list">
               <li className="warehouse-list__item">
                 <div className="warehouse-list__warehouse-wrapper">
                   <span className="warehouse-list__text--name">
                     {warehouse.name}
                   </span>
-
                   <p className="warehouse-list__text--address">
                     {warehouse.address}
                   </p>
                   <Link
                     key={warehouse.id}
-                    to={`/warehouses/${warehouse.id}`}
+                    to={`/warehouse/${warehouse.id}`}
                     className="warehouse-list__link"
                   >
                     <button className="warehouse-list__btn">

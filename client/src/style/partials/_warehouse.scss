@@ -1,10 +1,7 @@
 // WAREHOUSE DETAIL //
-.warehouse {
-}
 .warehouse-detail {
   @extend .container;
-  @include offset;
-  padding: 32px 0 24px 0;
+  padding: 32px 16px 24px;
   &__top-wrapper {
     display: flex;
     align-items: center;
@@ -41,7 +38,6 @@
     &--position,
     &--number,
     &--email {
-      width: 138px;
       margin: 0;
       @include paragraph(14px, 20px);
       font-style: italic;
@@ -51,7 +47,12 @@
 
 // WAREHOUSE DETAIL FOR TABLET //
 @include tablet {
+  .warehouse {
+    max-width: $tablet-width;
+    margin: 0 auto;
+  }
   .warehouse-detail {
+    padding: 48px 24px;
     &__info-wrapper {
       display: flex;
     }
@@ -75,12 +76,12 @@
 // PRODUCT LIST //
 .warehouse-product {
   background: $alabaster;
-  padding: 24px 0;
 }
 .warehouse-product-list {
-  @include offset;
-  padding: 0;
+  margin: 0;
+  padding: 24px 16px;
   position: relative;
+  border-bottom: 2px solid $mercury;
   &__item {
     padding-top: 16px;
   }
@@ -95,12 +96,16 @@
     }
     &--para {
       @include paragraph(14px, 24px);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
       margin: 0;
     }
   }
   &__btn {
     position: absolute;
-    top: 16px;
+    margin-right: 16px;
+    top: 40px;
     right: 0;
     border: none;
     background: transparent;
@@ -109,5 +114,81 @@
     &:focus {
       outline: none;
     }
+  }
+}
+
+// PRODUCT LIST FOR TABLET
+@include tablet {
+  .warehouse {
+    max-width: $tablet-width;
+  }
+  .warehouse-detail {
+    padding: 48px 24px;
+  }
+  .warehouse-product {
+    padding: 24px 24px;
+  }
+  .warehouse-product-list {
+    padding: 24px 0;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    &:first-child {
+      .warehouse-product-list__text--label {
+        display: block;
+      }
+      .warehouse-product-list__text-wrapper {
+        position: relative;
+      }
+      .warehouse-product-list__btn {
+        position: absolute;
+        top: 88px;
+      }
+    }
+    &__text {
+      &--label {
+        @include paragraph(14px, 24px);
+        color: $silver;
+        display: none;
+      }
+    }
+    &__item:first-child {
+      width: 224px;
+    }
+    &__item {
+      width: 120px;
+    }
+    &__text-wrapper {
+      margin-top: 24px;
+      position: relative;
+    }
+    &__btn {
+      position: absolute;
+      top: 64px;
+    }
+  }
+}
+
+// WAREHOUSE DETAIL PAGE FOR DESKTOP
+@include desktop {
+  .warehouse {
+    max-width: $desktop-width;
+  }
+  .warehouse-detail {
+    padding: 48px 180px;
+  }
+  .warehouse-product {
+    padding: 24px 180px;
+  }
+}
+// Delete-btn
+.delete-btn {
+  display: none;
+  position: absolute;
+}
+// BTN ACTIVE
+.btn-active {
+  .delete-btn {
+    display: block;
   }
 }

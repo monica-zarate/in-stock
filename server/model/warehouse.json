@@ -219,5 +219,17 @@
         "categories": ""
       }
     ]
+  },
+  {
+    "id": 5,
+    "name": "BRAINSTATION-01",
+    "location": "Vancouver, CA",
+    "address": "",
+    "contactName": "Nusorn Krachangtoy",
+    "position": "Manager",
+    "phoneNumber": "222333444",
+    "email": "nusorn@brainstation.com",
+    "categories": "",
+    "products": []
   }
 ]
