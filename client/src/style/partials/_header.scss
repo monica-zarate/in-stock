@@ -1,8 +1,5 @@
 //Header for Mobile
 
-.active {
-  border-bottom: 0.313rem $white solid;
-}
 .header {
   width: 100%;
   height: 5rem;
@@ -54,7 +51,6 @@
     &:hover {
       color: $white;
       border-bottom: 0.313rem $white solid;
-      // text-decoration: none;
     }
 
     a,
