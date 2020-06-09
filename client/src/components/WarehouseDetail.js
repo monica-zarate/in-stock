@@ -3,15 +3,31 @@ import { Link } from "react-router-dom";
 import BackArrow from "../assets/Icons/SVG/Icon-back-arrow.svg";
 import KebabIcon from "../assets/Icons/SVG/Icon-kebab-default.svg";
 class WarehouseDetail extends Component {
-  componentDidUpdate(prevProps) {
-    const oldWarehouseId = prevProps.match.params.id;
-    const newWarehouseId = this.props.match.params.id;
+  state = {
+    warehouse: null,
+  };
 
-    if (newWarehouseId !== oldWarehouseId) {
-      this.getWarehouseDetail(newWarehouseId);
-    }
+  componentDidMount() {
+    console.log("Warehouse Detail", this.props);
+    console.log(this.props.warehouses);
+    this.setState({
+      warehouse: this.props.warehouses.filter((warehouse) => {
+        return warehouse.id === Number(this.props.match.params.id);
+      }),
+    });
+    console.log(this.state.warehouse);
+  }
+
+  kebabClick(event) {
+    console.dir(event.target);
+    event.target.parentNode.parentNode.parentNode.classList.toggle(
+      "btn-active"
+    );
   }
   render() {
+    if (this.state.warehouse == null) {
+      return <p>Loading</p>;
+    }
     const {
       id,
       name,
@@ -21,7 +37,8 @@ class WarehouseDetail extends Component {
       position,
       email,
       phoneNumber,
-    } = this.props.warehouse;
+      products,
+    } = this.state.warehouse[0];
 
     if (id === undefined) {
       return <p>Loading</p>;
@@ -46,10 +63,8 @@ class WarehouseDetail extends Component {
               <span className="warehouse-detail__text--subheader">ADDRESS</span>
               <div className="warehouse-detail__text-wrapper">
                 <p className="warehouse-detail__text--address">{address}</p>
-                <p className="warehouse-detail__text--address">{address}</p>
               </div>
               <div className="warehouse-detail__text-wrapper">
-                <p className="warehouse-detail__text--address">{location}</p>
                 <p className="warehouse-detail__text--address">{location}</p>
               </div>
             </div>
@@ -67,49 +82,78 @@ class WarehouseDetail extends Component {
           </div>
         </div>
         <div className="warehouse-product">
-          <ul className="warehouse-product-list">
-            <li className="warehouse-product-list__item">
-              <span className="warehouse-product-list__text--label">ITEM</span>
-              <p className="warehouse-product-list__text--product-name">
-                Product Name Here
-              </p>
-              <p className="warehouse-product-list__text--para">
-                Here is a very brief description of the product in the
-                inventory...
-              </p>
-              <button className="warehouse-product-list__btn">
-                <img
-                  src={KebabIcon}
-                  alt="Kebab Icon"
-                  className="warehouse-detail__img"
-                />
-              </button>
-            </li>
-            <li className="warehouse-product-list__item">
-              <span className="warehouse-product-list__text--label">
-                LAST ORDERED
-              </span>
-              <p className="warehouse-product-list__text--para">05/24/2018</p>
-            </li>
-            <li className="warehouse-product-list__item">
-              <span className="warehouse-product-list__text--label">
-                LOCATION
-              </span>
-              <p className="warehouse-product-list__text--para">Toronto, CA</p>
-            </li>
-            <li className="warehouse-product-list__item">
-              <span className="warehouse-product-list__text--label">
-                QUANTITY
-              </span>
-              <p className="warehouse-product-list__text--para">12,000</p>
-            </li>
-            <li className="warehouse-product-list__item">
-              <span className="warehouse-product-list__text--label">
-                STATUS
-              </span>
-              <p className="warehouse-product-list__text--para">In Stock</p>
-            </li>
-          </ul>
+          {products.map((product) => {
+            return (
+              <ul key={product.productId} className="warehouse-product-list">
+                <li className="warehouse-product-list__item">
+                  <span className="warehouse-product-list__text--label">
+                    ITEM
+                  </span>
+                  <div className="warehouse-product-list__text-wrapper">
+                    <p className="warehouse-product-list__text--product-name">
+                      {product.productName}
+                    </p>
+                    <p className="warehouse-product-list__text--para">
+                      {product.description}
+                    </p>
+                  </div>
+                  <button
+                    onClick={this.kebabClick}
+                    className="warehouse-product-list__btn"
+                  >
+                    <img
+                      src={KebabIcon}
+                      alt="Kebab Icon"
+                      className="warehouse-product-list__img"
+                    />
+                  </button>
+                  <div className="delete-btn">
+                    <p className="delete-btn__text">Remove</p>
+                  </div>
+                </li>
+                <li className="warehouse-product-list__item">
+                  <span className="warehouse-product-list__text--label">
+                    LAST ORDERED
+                  </span>
+                  <div className="warehouse-product-list__text-wrapper">
+                    <p className="warehouse-product-list__text--para">
+                      {product.lastOrdered}
+                    </p>
+                  </div>
+                </li>
+                <li className="warehouse-product-list__item">
+                  <span className="warehouse-product-list__text--label">
+                    LOCATION
+                  </span>
+                  <div className="warehouse-product-list__text-wrapper">
+                    <p className="warehouse-product-list__text--para">
+                      {product.location}
+                    </p>
+                  </div>
+                </li>
+                <li className="warehouse-product-list__item">
+                  <span className="warehouse-product-list__text--label">
+                    QUANTITY
+                  </span>
+                  <div className="warehouse-product-list__text-wrapper">
+                    <p className="warehouse-product-list__text--para">
+                      {product.quantity}
+                    </p>
+                  </div>
+                </li>
+                <li className="warehouse-product-list__item">
+                  <span className="warehouse-product-list__text--label">
+                    STATUS
+                  </span>
+                  <div className="warehouse-product-list__text-wrapper">
+                    <p className="warehouse-product-list__text--para">
+                      {product.inStock}
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            );
+          })}
         </div>
       </div>
     );

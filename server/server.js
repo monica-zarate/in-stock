@@ -128,7 +128,7 @@ app
   });
 
 // Dynamic path using an id as a param
-app.get("/warehouses/:id", (req, res) => {
+app.get("/warehouse/:id", (req, res) => {
   const whId = req.params.id;
   res.json(getWhDetail(whId));
 });

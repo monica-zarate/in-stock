@@ -5,6 +5,7 @@ import {
   Route,
   Switch,
   Redirect,
+  withRouter,
 } from "react-router-dom";
 import "./style/main.css";
 import Header from "./components/Header";
@@ -25,6 +26,7 @@ class App extends Component {
   componentDidMount() {
     this.getWarehouses();
     this.getWarehouseDetail();
+    console.log("Comp mounted");
   }
 
   /**
@@ -46,8 +48,9 @@ class App extends Component {
    */
   getWarehouseDetail(id) {
     axios
-      .get(`/warehouses/${id}`)
+      .get(`/warehouse/${id}`)
       .then((response) => {
+        console.log(response);
         this.setState({
           warehouseDetail: response.data,
         });
@@ -55,39 +58,43 @@ class App extends Component {
       .catch((error) => console.log(error));
   }
 
+  componentDidUpdate(prevProps) {
+    console.log(prevProps);
+    console.log(this.props);
+    console.log("Comp updated");
+    // this.getWarehouseDetail(this.props.match.params.id);
+  }
   render() {
-    console.log(this.state.warehouseList);
     return (
       <div className="App">
-        <Router>
-          <Header />
-          <Redirect from="/" to="/inventory" />
-          <Switch>
-            <Route path="/inventory" component={Inventory} exact />
-            <Route
-              path="/warehouses"
-              render={(props) => (
-                <Warehouses warehouses={this.state.warehouseList} {...props} />
-              )}
-            />
-            <Route
-              path="/warehouses/:id"
-              render={(props) => (
-                <WarehouseDetail
-                  warehouse={this.state.warehouseDetail}
-                  {...props}
-                />
-              )}
-            />
-            <Route path="/product/:id" component={Products} exact />
-            <Redirect to="/inventory" from="/" exact />
-            <Redirect to="/inventory" from="/product" exact />
-          </Switch>
-          <CreateNewItem />
-          <CreateNewLocation />
-        </Router>
+        <Header />
+        <Redirect from="/" to="/inventory" />
+        <Switch>
+          <Route path="/inventory" component={Inventory} exact />
+          <Route
+            path="/warehouses"
+            render={(props) => (
+              <Warehouses warehouses={this.state.warehouseList} {...props} />
+            )}
+          />
+          <Route
+            path="/warehouse/:id"
+            render={(props) => (
+              <WarehouseDetail
+                warehouses={this.state.warehouseList}
+                {...props}
+              />
+            )}
+          />
+          <Route path="/product/:id" component={Products} exact />
+          <Redirect to="/inventory" from="/" exact />
+          <Redirect to="/inventory" from="/product" exact />
+        </Switch>
+        <CreateNewItem />
+        <CreateNewLocation />
       </div>
     );
   }
 }
-export default App;
+
+export default withRouter(App);
