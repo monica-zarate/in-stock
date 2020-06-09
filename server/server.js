@@ -57,23 +57,39 @@ app
     }
     fs.writeFileSync("./model/warehouse.json", JSON.stringify(warehouseArray));
     res.json(warehouseArray);
-  })
-  .delete((req, res) => {
-    const warehouseArray = getWh();
-    let productId = req.body.productId;
-    for (i = 0; i < warehouseArray.length; i++) {
-      let productsArray = warehouseArray[i].products;
-      let updatedProducts = [];
-      for (j = 0; j < productsArray.length; j++) {
-        if (productsArray[j].productId !== productId) {
-          updatedProducts.push(productsArray[j]);
-        }
-      }
-      warehouseArray[i].products = updatedProducts;
-    }
-    fs.writeFileSync("./model/warehouse.json", JSON.stringify(warehouseArray));
-    res.json(warehouseArray);
   });
+// .delete((req, res) => {
+//   const warehouseArray = getWh();
+//   let productId = req.body.productId;
+//   for (i = 0; i < warehouseArray.length; i++) {
+//     let productsArray = warehouseArray[i].products;
+//     let updatedProducts = [];
+//     for (j = 0; j < productsArray.length; j++) {
+//       if (productsArray[j].productId !== productId) {
+//         updatedProducts.push(productsArray[j]);
+//       }
+//     }
+//     warehouseArray[i].products = updatedProducts;
+//   }
+//   fs.writeFileSync("./model/warehouse.json", JSON.stringify(warehouseArray));
+//   res.json(req);
+// });
+app.delete("/inventory/:id", (req, res) => {
+  const warehouseArray = getWh();
+  let productId = req.params.id;
+  for (i = 0; i < warehouseArray.length; i++) {
+    let productsArray = warehouseArray[i].products;
+    let updatedProducts = [];
+    for (j = 0; j < productsArray.length; j++) {
+      if (productsArray[j].productId !== productId) {
+        updatedProducts.push(productsArray[j]);
+      }
+    }
+    warehouseArray[i].products = updatedProducts;
+  }
+  fs.writeFileSync("./model/warehouse.json", JSON.stringify(warehouseArray));
+  res.json(warehouseArray);
+});
 
 // Get and Post Warehouse Details
 

@@ -166,7 +166,6 @@ li {
 .navigation__options:hover {
   color: #ffffff;
   border-bottom: 0.313rem #ffffff solid;
-  text-decoration: none;
 }
 
 .navigation__options a, .navigation__options-text:active {
