@@ -115,6 +115,7 @@ export default class CreateNewItem extends Component {
                 <label className="label">
                   In Stock
                   <Switch
+                    id="checkbox"
                     onChange={this.handleChange}
                     checked={this.state.checked}
                     uncheckedIcon={false}
