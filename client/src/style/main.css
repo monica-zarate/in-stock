@@ -810,61 +810,11 @@ p {
   }
 }
 
-.switch {
-  height: 1.5rem;
-  width: 2.5rem;
-  margin: 0 1rem 0 0;
-}
-
-.checkbox {
-  display: none;
-}
-
-.slider {
-  width: 2.5rem;
-  height: 1.5rem;
-  border-radius: 25px;
-  cursor: pointer;
-  position: absolute;
-  background-color: #afafaf;
-  border: 1px solid silver;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
-}
-
-.slider:before {
-  border-radius: 50%;
-  height: 1.5rem;
-  width: 1.5rem;
-  content: "";
-  border: 1px solid #afafaf;
-  position: absolute;
-  top: -1px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  background-color: #ffffff;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
-}
-
-.checkbox:checked + .slider {
-  background-color: #66cc00;
-  border: 1px solid #339900;
-}
-
-.checkbox:checked + .slider:before {
-  -webkit-transform: translateX(15px);
-          transform: translateX(15px);
-}
-
 .label {
   font-family: "Avenir Next Regular";
   font-size: 1rem;
   line-height: 1rem;
   color: #323232;
-}
-
-.label__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -874,7 +824,14 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.label__wrapper {
   height: 3rem;
+}
+
+.react-switch-bg {
+  margin: 0 1rem 0 0;
 }
 
 .product {

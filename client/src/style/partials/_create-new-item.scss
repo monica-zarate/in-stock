@@ -154,52 +154,18 @@
 
 // Checkbox Styles
 
-.switch {
-  height: 1.5rem;
-  width: 2.5rem;
-  margin: 0 1rem 0 0;
-}
-.checkbox {
-  display: none;
-}
-.slider {
-  width: 2.5rem;
-  height: 1.5rem;
-  border-radius: 25px;
-  cursor: pointer;
-  position: absolute;
-  background-color: $silver;
-  border: 1px solid silver;
-  transition: 0.5s ease;
-  &:before {
-    border-radius: 50%;
-    height: 1.5rem;
-    width: 1.5rem;
-    content: "";
-    border: 1px solid $silver;
-    position: absolute;
-    top: -1px;
-    box-sizing: border-box;
-    background-color: $white;
-    transition: 0.5s ease;
-  }
-}
-.checkbox:checked + .slider {
-  background-color: $bright-green;
-  border: 1px solid $dark-green;
-}
-.checkbox:checked + .slider:before {
-  transform: translateX(15px);
-}
-
 .label {
   @include paragraph(1rem, 1rem);
   color: $black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   &__wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     height: 3rem;
   }
+}
+
+.react-switch-bg {
+  margin: 0 1rem 0 0;
 }
