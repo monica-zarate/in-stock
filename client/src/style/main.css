@@ -425,6 +425,9 @@ p {
   background-color: #fafafa;
   border: 1px solid #e1e1e1;
   border-radius: 4px;
+  font-family: "Avenir Next Regular";
+  font-size: 0.813rem;
+  line-height: 1.125rem;
 }
 
 @media (min-width: 768px) {
