@@ -103,6 +103,7 @@
     }
   }
   &__btn {
+    z-index: 10;
     position: absolute;
     margin-right: 16px;
     top: 40px;
@@ -183,11 +184,22 @@
 }
 // Delete-btn
 .delete-btn {
+  z-index: 11;
   display: none;
   position: absolute;
+  right: 16px;
+  bottom: 16px;
+  background: $white;
+  border: 1px solid $mercury;
+  border-radius: 4px;
+  padding: 8px;
+  width: 80px;
+  outline: none;
+  cursor: pointer;
 }
 // BTN ACTIVE
 .btn-active {
+  position: relative;
   .delete-btn {
     display: block;
   }

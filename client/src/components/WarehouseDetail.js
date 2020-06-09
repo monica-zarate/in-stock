@@ -107,9 +107,7 @@ class WarehouseDetail extends Component {
                       className="warehouse-product-list__img"
                     />
                   </button>
-                  <div className="delete-btn">
-                    <p className="delete-btn__text">Remove</p>
-                  </div>
+                  <button className="delete-btn">Remove</button>
                 </li>
                 <li className="warehouse-product-list__item">
                   <span className="warehouse-product-list__text--label">
