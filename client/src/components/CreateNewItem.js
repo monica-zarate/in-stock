@@ -1,14 +1,24 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import Switch from "react-switch";
 
 export default class CreateNewItem extends Component {
-  state = {
-    locations: [],
-  };
+  constructor() {
+    super();
+    this.state = {
+      checked: false,
+      locations: [],
+    };
+    this.handleChange = this.handleChange.bind(this);
+  }
+  handleChange(checked) {
+    this.setState({ checked });
+  }
+
   componentDidMount() {
     axios
       .get("http://localhost:5000/locations")
+
       .then((response) => {
         this.setState({
           locations: response.data,
@@ -102,15 +112,14 @@ export default class CreateNewItem extends Component {
             <li className="new-item__input">
               <p className="new-item__input--title">STATUS</p>
               <div className="label__wrapper">
-                <label className="label">In Stock</label>
-
-                <label className="switch" for="checkbox">
-                  <input
-                    className="new-item__input--content checkbox"
-                    type="checkbox"
-                    id="checkbox"
+                <label className="label">
+                  In Stock
+                  <Switch
+                    onChange={this.handleChange}
+                    checked={this.state.checked}
+                    uncheckedIcon={false}
+                    checkedIcon={false}
                   />
-                  <div className="slider"></div>
                 </label>
               </div>
             </li>
