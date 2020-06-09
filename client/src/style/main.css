@@ -1273,6 +1273,7 @@ p {
 }
 
 .warehouse-product-list__btn {
+  z-index: 10;
   position: absolute;
   margin-right: 16px;
   top: 40px;
@@ -1355,8 +1356,22 @@ p {
 }
 
 .delete-btn {
+  z-index: 11;
   display: none;
   position: absolute;
+  right: 16px;
+  bottom: 16px;
+  background: #ffffff;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+  padding: 8px;
+  width: 80px;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn-active {
+  position: relative;
 }
 
 .btn-active .delete-btn {
