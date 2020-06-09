@@ -1,105 +1,114 @@
 import React, { Component } from "react";
+import axios from "axios";
 import { Link } from "react-router-dom";
-import BackArrow from "../assets/Icons/SVG/Icon-back-arrow.svg";
-import KebabIcon from "../assets/Icons/SVG/Icon-kebab-default.svg";
-class WarehouseDetail extends Component {
+
+import ArrowRight from "../assets/Icons/SVG/Icon-arrow-right.svg";
+
+class Warehouses extends Component {
+  state = {
+    warehouseList: [],
+    warehouseDetail: {},
+  };
+
+  componentDidMount() {
+    axios
+      .get("http://localhost:5000/locations")
+      .then((response) => {
+        this.setState({
+          warehouseList: response.data,
+        });
+      })
+      .catch((error) => console.log(error));
+  }
+
   render() {
     return (
-      <div className="warehouse">
-        <div className="warehouse-detail">
-          <div className="warehouse-detail__top-wrapper">
-            <Link to={`/locations`} className="warehouse-product-list__link">
-              <button className="warehouse-detail__btn">
-                <img
-                  src={BackArrow}
-                  alt="Back Arrow"
-                  className="warehouse-detail__img"
-                />
-              </button>
-            </Link>
-            <span className="warehouse-detail__name">Warehouse Name</span>
-          </div>
-          <div className="warehouse-detail__info-wrapper">
-            <div className="warehouse-detail__address-wrapper">
-              <span className="warehouse-detail__text--subheader">ADDRESS</span>
-              <div className="warehouse-detail__text-wrapper">
-                <p className="warehouse-detail__text--address">
-                  123 Main Street W.
-                </p>
-                <p className="warehouse-detail__text--address">Suite 201</p>
-              </div>
-              <div className="warehouse-detail__text-wrapper">
-                <p className="warehouse-detail__text--address">Toronto, ON</p>
-                <p className="warehouse-detail__text--address">M65GB7 CA</p>
-              </div>
-            </div>
-            <div className="warehouse-detail__contact-wrapper">
-              <span className="warehouse-detail__text--subheader">CONTACT</span>
-              <div className="warehouse-detail__text-wrapper">
-                <p className="warehouse-detail__text--name">Mara Weinberg</p>
-                <p className="warehouse-detail__text--position">
-                  Warehouse Manager
-                </p>
-              </div>
-              <div className="warehouse-detail__text-wrapper">
-                <p className="warehouse-detail__text--number">
-                  +1 416 678 2345
-                </p>
-                <p className="warehouse-detail__text--email">
-                  weinberg@instock.com
-                </p>
-              </div>
-            </div>
-          </div>
+      <div className="container location">
+        <div className="location__top-wrapper">
+          <h1 className="location__title">Locations</h1>
+          <form className="location__form">
+            <input
+              type="search"
+              name="search"
+              placeholder="Search"
+              className="location__search-box"
+            />
+          </form>
         </div>
-        <div className="warehouse-product">
-          <ul className="warehouse-product-list">
-            <li className="warehouse-product-list__item">
-              <span className="warehouse-product-list__text--label">ITEM</span>
-              <p className="warehouse-product-list__text--product-name">
-                Product Name Here
-              </p>
-              <p className="warehouse-product-list__text--para">
-                Here is a very brief description of the product in the
-                inventory...
-              </p>
-              <button className="warehouse-product-list__btn">
-                <img
-                  src={KebabIcon}
-                  alt="Kebab Icon"
-                  className="warehouse-detail__img"
-                />
-              </button>
-            </li>
-            <li className="warehouse-product-list__item">
-              <span className="warehouse-product-list__text--label">
-                LAST ORDERED
-              </span>
-              <p className="warehouse-product-list__text--para">05/24/2018</p>
-            </li>
-            <li className="warehouse-product-list__item">
-              <span className="warehouse-product-list__text--label">
-                LOCATION
-              </span>
-              <p className="warehouse-product-list__text--para">Toronto, CA</p>
-            </li>
-            <li className="warehouse-product-list__item">
-              <span className="warehouse-product-list__text--label">
-                QUANTITY
-              </span>
-              <p className="warehouse-product-list__text--para">12,000</p>
-            </li>
-            <li className="warehouse-product-list__item">
-              <span className="warehouse-product-list__text--label">
-                STATUS
-              </span>
-              <p className="warehouse-product-list__text--para">In Stock</p>
-            </li>
-          </ul>
-        </div>
+        <ul className="location__labels-wrapper">
+          <li className="location__label-item">
+            <span className="location__labels--text">WAREHOUSE</span>
+          </li>
+          <li className="location__label-item">
+            <span className="location__labels--text">CONTACT</span>
+          </li>
+          <li className="location__label-item">
+            <span className="location__labels--text">CONTACT INFORMATION</span>
+          </li>
+          <li className="location__label-item">
+            <span className="location__labels--text">CATEGORIES</span>
+          </li>
+        </ul>
+        {this.state.warehouseList.map((warehouse) => {
+          return (
+            <ul className="warehouse-list">
+              <li className="warehouse-list__item">
+                <div className="warehouse-list__warehouse-wrapper">
+                  <span className="warehouse-list__text--name">
+                    {warehouse.name}
+                  </span>
+
+                  <p className="warehouse-list__text--address">
+                    {warehouse.address}
+                  </p>
+                  <Link
+                    key={warehouse.id}
+                    to={`/warehouse/${warehouse.id}`}
+                    className="warehouse-list__link"
+                  >
+                    <button className="warehouse-list__btn">
+                      <img
+                        src={ArrowRight}
+                        alt="Arrow Right"
+                        className="warehouse-list__img"
+                      />
+                    </button>
+                  </Link>
+                </div>
+              </li>
+              <li className="warehouse-list__item">
+                <div className="warehouse-list__contact-wrapper">
+                  <p className="warehouse-list__text--contact-name">
+                    {warehouse.contactName}
+                  </p>
+                  <p className="warehouse-list__text--contact-position">
+                    {warehouse.position}
+                  </p>
+                </div>
+              </li>
+              <li className="warehouse-list__item">
+                <div className="warehouse-list__contact-info-wrapper">
+                  <p className="warehouse-list__text--number">
+                    +1 {warehouse.phoneNumber}
+                  </p>
+                  <p className="warehouse-list__text--email">
+                    {warehouse.email}
+                  </p>
+                </div>
+              </li>
+              <li className="warehouse-list__item">
+                <div className="warehouse-list__categories-wrapper">
+                  <p className="warehouse-list__text--categories">
+                    {warehouse.categories}
+                  </p>
+                </div>
+              </li>
+            </ul>
+          );
+        })}
       </div>
     );
   }
 }
 
-export default WarehouseDetail;
+export default Warehouses;
