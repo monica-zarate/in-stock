@@ -12,6 +12,7 @@ import Inventory from "./components/Inventory";
 import Warehouses from "./components/Warehouses";
 import Products from "./components/Products";
 import CreateNewItem from "./components/CreateNewItem";
+import CreateNewLocation from "./components/CreateNewLocation";
 
 import WarehouseDetail from "./components/WarehouseDetail";
 
@@ -32,6 +33,7 @@ function App() {
           </Switch>
         </Router>
         <CreateNewItem />
+        <CreateNewLocation />
       </div>
     </>
   );

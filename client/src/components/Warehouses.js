@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 import ArrowRight from "../assets/Icons/SVG/Icon-arrow-right.svg";
+import addBtn from "../assets/Icons/SVG/Icon-add.svg";
 
 class Warehouses extends Component {
   state = {
@@ -20,6 +21,11 @@ class Warehouses extends Component {
       })
       .catch((error) => console.log(error));
   }
+
+  newItemClick = (event) => {
+    let newItemObject = document.getElementsByClassName("new-location")[0];
+    newItemObject.style.display = "block";
+  };
 
   render() {
     return (
@@ -106,6 +112,9 @@ class Warehouses extends Component {
             </ul>
           );
         })}
+        <div className="add-new" onClick={this.newItemClick}>
+          <img className="add-new__img" src={addBtn} alt="" />
+        </div>
       </div>
     );
   }
