@@ -15,9 +15,19 @@
         "productName": "HP 15.6inch Laptop - Silver",
         "description": "Intel Core i3-1005G1/256GB SSD/8GB RAM/Windows 10.",
         "inStock": "In Stock",
-        "quantity": 630,
-        "lastOrdered": "2020-05-24",
-        "location": "Vancouver, CA",
+        "quantity": 700,
+        "lastOrdered": "2019-08-19",
+        "location": "Toronto, CA",
+        "categories": "electronics, computers, cameras, tv"
+      },
+      {
+        "productId": "01-HP2-YVR",
+        "productName": "HP 15.6inch Gaming Laptop - Black",
+        "description": "AMD Ryzen 5 3550H/256GB SSD/8GB RAM/NVIDIA GeForce GTX 1050/Win 10.",
+        "inStock": "Out of Stock",
+        "quantity": 700,
+        "lastOrdered": "2019-08-19",
+        "location": "Toronto, CA",
         "categories": "electronics, computers, cameras, tv"
       },
       {
@@ -186,5 +196,28 @@
     "email": "calgarymanager@brainstation.io",
     "categories": "electronics, computers, cameras, tv",
     "products": []
+  },
+  {
+    "id": 4,
+    "name": "Name",
+    "location": "Calgary, CA",
+    "address": "adddress",
+    "contactName": "This is contact",
+    "position": "position",
+    "phoneNumber": "phone",
+    "email": "email",
+    "categories": "categorie",
+    "products": [
+      {
+        "productId": "e8ac0c95-fbd4-4356-b62d-24adf959a620",
+        "productName": "Item2",
+        "description": "description",
+        "inStock": "In Stock",
+        "quantity": "25",
+        "lastOrdered": "ordered",
+        "location": "Calgary, CA",
+        "categories": ""
+      }
+    ]
   }
 ]

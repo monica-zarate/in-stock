@@ -12,6 +12,7 @@ import Inventory from "./components/Inventory";
 import Warehouses from "./components/Warehouses";
 import Products from "./components/Products";
 import CreateNewItem from "./components/CreateNewItem";
+import CreateNewLocation from "./components/CreateNewLocation";
 
 import WarehouseDetail from "./components/WarehouseDetail";
 
@@ -55,7 +56,7 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.warehouseDetail);
+    console.log(this.state.warehouseList);
     return (
       <div className="App">
         <Router>
@@ -81,8 +82,9 @@ class App extends Component {
             <Route path="/product/:id" component={Products} exact />
             <Redirect to="/inventory" from="/" exact />
             <Redirect to="/inventory" from="/product" exact />
-            <Route path="/inventory/add_new_item" component={CreateNewItem} />
           </Switch>
+          <CreateNewItem />
+          <CreateNewLocation />
         </Router>
       </div>
     );

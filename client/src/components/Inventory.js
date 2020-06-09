@@ -24,7 +24,7 @@ export default class Inventory extends Component {
   removeClick = (id) => {
     axios
       .delete(`http://localhost:5000/inventory/${id}`)
-      .then(this.setState.inventoryList)
+      .then(window.location.reload(false))
       .catch((err) => console.log(err));
   };
 
@@ -32,6 +32,11 @@ export default class Inventory extends Component {
     this.state.hide
       ? this.setState({ hide: false })
       : this.setState({ hide: true });
+  };
+
+  newItemClick = (event) => {
+    let newItemObject = document.getElementsByClassName("new-item")[0];
+    newItemObject.style.display = "block";
   };
 
   render() {
@@ -64,11 +69,10 @@ export default class Inventory extends Component {
             </label>
           </div>
         </div>
-        <Link to={`inventory/add_new_item`}>
-          <div className="add-new">
-            <img className="add-new__img" src={addBtn} alt="" />
-          </div>
-        </Link>
+        <div className="add-new" onClick={this.newItemClick}>
+          <img className="add-new__img" src={addBtn} alt="" />
+        </div>
+
         {this.state.inventoryList.map((inv) => {
           return (
             <div className="inventory__container" key={inv.productId}>

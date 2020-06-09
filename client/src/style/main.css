@@ -421,6 +421,9 @@ p {
   background-color: #fafafa;
   border: 1px solid #e1e1e1;
   border-radius: 4px;
+  font-family: "Avenir Next Regular";
+  font-size: 0.813rem;
+  line-height: 1.125rem;
 }
 
 @media (min-width: 768px) {
@@ -610,19 +613,32 @@ p {
 }
 
 .new-item {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  overflow: auto;
+  background-color: rgba(50, 50, 50, 0.5);
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.new-item__container {
   padding: 2rem 1rem;
-  max-width: 18rem;
+  max-width: 20rem;
   margin: 0 auto;
+  background-color: #ffffff;
 }
 
 @media (min-width: 768px) {
-  .new-item {
+  .new-item__container {
     max-width: unset;
     width: 36rem;
     height: 40.5rem;
     border-radius: 4px;
-    border: 1px solid #323232;
     padding: 3.5rem 3rem 2.5rem 3rem;
+    margin: 10% auto;
   }
 }
 
@@ -737,6 +753,7 @@ p {
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
+    max-width: unset;
   }
 }
 
@@ -749,6 +766,8 @@ p {
   height: 3rem;
   padding: 0;
   border-radius: 4px;
+  outline: none;
+  cursor: pointer;
   font-family: "Avenir Next Demi Bold";
   font-size: 1rem;
   line-height: 1rem;
@@ -771,6 +790,8 @@ p {
   border-style: none;
   height: 3rem;
   padding: 0;
+  outline: none;
+  cursor: pointer;
   color: #004892;
   font-family: "Avenir Next Demi Bold";
   font-size: 1rem;
@@ -783,6 +804,30 @@ p {
     width: 4rem;
     margin: 2.5rem 3rem 0 0;
   }
+}
+
+.label {
+  font-family: "Avenir Next Regular";
+  font-size: 1rem;
+  line-height: 1rem;
+  color: #323232;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.label__wrapper {
+  height: 3rem;
+}
+
+.react-switch-bg {
+  margin: 0 1rem 0 0;
 }
 
 .product {
@@ -1255,5 +1300,208 @@ p {
 
 .warehouse-product-list__btn:focus {
   outline: none;
+}
+
+.new-location {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  overflow: auto;
+  background-color: rgba(50, 50, 50, 0.5);
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.new-location__container {
+  padding: 2rem 1rem;
+  max-width: 20rem;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .new-location__container {
+    max-width: unset;
+    width: 36rem;
+    height: 45rem;
+    border-radius: 4px;
+    padding: 3.5rem 3rem 2.5rem 3rem;
+    margin: 10% auto;
+  }
+}
+
+.new-location__title {
+  font-family: "Avenir Next Bold";
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin: 0 0 0.5rem 0;
+}
+
+@media (min-width: 768px) {
+  .new-location__title {
+    font-family: "Avenir Next Bold";
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+  }
+}
+
+.new-location__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .new-location__list {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.new-location__input {
+  width: 100%;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .new-location__input {
+    width: 13.75rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .new-location__input:last-child {
+    width: 100%;
+  }
+}
+
+.new-location__input--title {
+  font-family: "Avenir Next Demi Bold";
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+  color: #afafaf;
+  margin: 1.5rem 0 0.5rem 0;
+}
+
+.new-location__input--content, .new-location__input--content-text, .new-location__input--content-select {
+  width: 100%;
+  height: 3rem;
+  border-style: none;
+  border: 1px solid #afafaf;
+  border-radius: 2px;
+  background-color: #fafafa;
+  color: #323232;
+  font-family: "Avenir Next Regular";
+  font-size: 1rem;
+  line-height: 0.75rem;
+  padding: 0.5rem 1rem;
+  outline: none;
+}
+
+.new-location__input--content:focus, .new-location__input--content-text:focus, .new-location__input--content-select:focus {
+  border: 1px solid #323232;
+}
+
+.new-location__input--content-text {
+  resize: none;
+  height: 5rem;
+}
+
+.new-location__input--content-select {
+  background-image: url("/icons/drop-up.svg"), url("/icons/drop-down.svg");
+  background-position: top 5px right 1rem, bottom 5px right 1rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-repeat: no-repeat;
+  background-size: 1.75rem;
+}
+
+.new-location__cta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 18rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .new-location__cta {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    max-width: unset;
+  }
+}
+
+.new-location__cta--save {
+  margin: 1.5rem 0 0 0;
+  width: 100%;
+  background-color: #004892;
+  color: #fafafa;
+  border-style: none;
+  height: 3rem;
+  padding: 0;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  font-family: "Avenir Next Demi Bold";
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+.new-location__cta--save:hover {
+  background-color: #002f5f;
+}
+
+@media (min-width: 768px) {
+  .new-location__cta--save {
+    width: 10rem;
+    margin: 2.5rem 0 0 0;
+  }
+}
+
+.new-location__cta--cancel {
+  margin: 1rem 0 0 0;
+  width: 100%;
+  border-style: none;
+  height: 3rem;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+  color: #004892;
+  font-family: "Avenir Next Demi Bold";
+  font-size: 1rem;
+  line-height: 1rem;
+  background-color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .new-location__cta--cancel {
+    width: 4rem;
+    margin: 2.5rem 3rem 0 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .table-full-width {
+    width: 100%;
+  }
+  .table-full-width input {
+    width: 13.75rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */

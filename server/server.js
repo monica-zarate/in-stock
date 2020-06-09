@@ -1,8 +1,9 @@
 const express = require("express");
 const cors = require("cors");
 const fs = require("fs");
+const { v4: uuidv4 } = require("uuid");
 
-// Importing getItems and getWh controllers
+// Importing controllers
 const getItems = require("./controller/getItems");
 const getWh = require("./controller/getWh");
 const getWhDetail = require("./controller/getWhDetail");
@@ -23,17 +24,24 @@ app
   .post((req, res) => {
     const warehouseArray = getWh();
     let warehouseId = req.body.warehouseId;
+    let productId = uuidv4();
+    let inStockString = "Out of Stock";
+    if (req.body.inStock) {
+      inStockString = "In Stock";
+    }
+    console.log(warehouseId);
+    let warehouse = warehouseArray.filter((wh) => wh.id == warehouseId)[0];
+    let warehouseLocation = warehouse.location;
     const itemObject = {
-      productId: req.body.productId,
+      productId: productId,
       productName: req.body.productName,
       description: req.body.description,
-      inStock: req.body.inStock,
+      inStock: inStockString,
       quantity: req.body.quantity,
       lastOrdered: req.body.lastOrdered,
-      categories: req.body.categories,
+      location: warehouseLocation,
+      categories: "",
     };
-    console.log(warehouseId);
-    let warehouse = warehouseArray.filter((wh) => wh.id === warehouseId)[0];
     warehouse.products.push(itemObject);
     fs.writeFileSync("./model/warehouse.json", JSON.stringify(warehouseArray));
     res.json(warehouseArray);
@@ -101,9 +109,10 @@ app
   })
   .post((req, res) => {
     const warehouseArray = getWh();
+    let newId = warehouseArray.length + 1;
     const warehouseObject = {
-      id: req.body.id,
-      name: req.body.name,
+      id: newId,
+      name: req.body.wareHouseName,
       location: req.body.location,
       address: req.body.address,
       contactName: req.body.contactName,

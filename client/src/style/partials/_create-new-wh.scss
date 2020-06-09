@@ -1,4 +1,4 @@
-.new-item {
+.new-location {
   z-index: 1;
   width: 100%;
   height: 100%;
@@ -18,7 +18,7 @@
     @include tablet {
       max-width: unset;
       width: 36rem;
-      height: 40.5rem;
+      height: 45rem;
       border-radius: 4px;
       padding: 3.5rem 3rem 2.5rem 3rem;
 
@@ -151,21 +151,11 @@
     }
   }
 }
-
-// Checkbox Styles
-
-.label {
-  @include paragraph(1rem, 1rem);
-  color: $black;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  &__wrapper {
-    height: 3rem;
+.table-full-width {
+  @include tablet {
+    width: 100%;
+    & input {
+      width: 13.75rem;
+    }
   }
-}
-
-.react-switch-bg {
-  margin: 0 1rem 0 0;
 }
