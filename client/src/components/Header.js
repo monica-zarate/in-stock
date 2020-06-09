@@ -19,7 +19,7 @@ export default class Header extends React.Component {
     );
 
     //if locations page, underline location option
-    if (window.location.pathname === "/locations") {
+    if (window.location.pathname === "/warehouses") {
       location__header[0].classList.add("active");
       inventory__header[0].classList.remove("active");
     } else {
@@ -53,7 +53,7 @@ export default class Header extends React.Component {
               ref={this.locationHeader}
               className="navigation__options location__header"
             >
-              <Link to="/locations" className="navigation__link">
+              <Link to="/warehouses" className="navigation__link">
                 <h2 className="navigation__options-text">Locations</h2>
               </Link>
             </div>
