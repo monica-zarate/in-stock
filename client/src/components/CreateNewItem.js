@@ -3,14 +3,47 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 export default class CreateNewItem extends Component {
-  clickHandler = (event) => {
-    const itemsApi = "http://localhost:5000/inventory";
-    let itemNameInput = document.getElementsByClassName("");
-    let itemName = itemNameInput.value;
+  state = {
+    locations: [],
   };
+  componentDidMount() {
+    axios
+      .get("http://localhost:5000/locations")
+      .then((response) => {
+        this.setState({
+          locations: response.data,
+        });
+      })
+      .catch((err) => console.log(err));
+  }
+
   closeModal = (event) => {
     let newItemObject = document.getElementsByClassName("new-item")[0];
     newItemObject.style.display = "none";
+  };
+  saveItem = (event) => {
+    let productName = document.getElementById("productName").value;
+    let inStock = document.getElementById("checkbox").checked;
+    let location = document.getElementById("location").value;
+    let description = document.getElementById("description").value;
+    let lastOrdered = document.getElementById("lastOrdered").value;
+    let quantity = document.getElementById("quantity").value;
+    let newItemRequest = {
+      productName: productName,
+      description: description,
+      inStock: inStock,
+      warehouseId: location,
+      lastOrdered: lastOrdered,
+      quantity: quantity,
+    };
+    axios
+      .post("http://localhost:5000/inventory", newItemRequest)
+      .then((response) => {
+        this.closeModal();
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
   render() {
     return (
@@ -24,6 +57,7 @@ export default class CreateNewItem extends Component {
               <input
                 className="new-item__input--content"
                 type="text"
+                id="productName"
                 placeholder="Item Name"
               />
             </li>
@@ -32,6 +66,7 @@ export default class CreateNewItem extends Component {
               <input
                 className="new-item__input--content"
                 type="text"
+                id="lastOrdered"
                 placeholder="yyyy-mm-dd"
               />
             </li>
@@ -45,11 +80,14 @@ export default class CreateNewItem extends Component {
             </li>
             <li className="new-item__input">
               <p className="new-item__input--title">COUNTRY</p>
-              <select className="new-item__input--content-select">
-                <option value="0">Canada</option>
-                <option value="1">United States</option>
-                <option value="2">Mexico</option>
-                <option value="3">International</option>
+              <select className="new-item__input--content-select" id="location">
+                {this.state.locations.map((location) => {
+                  return (
+                    <option key={location.id} value={location.id}>
+                      {location.location}
+                    </option>
+                  );
+                })}
               </select>
             </li>
             <li className="new-item__input">
@@ -57,6 +95,7 @@ export default class CreateNewItem extends Component {
               <input
                 className="new-item__input--content"
                 type="text"
+                id="quantity"
                 placeholder="0"
               />
             </li>
@@ -80,13 +119,16 @@ export default class CreateNewItem extends Component {
               <textarea
                 className="new-item__input--content-text"
                 name="new-item__input--content"
+                id="description"
                 placeholder="(Optional)"
               ></textarea>
             </li>
           </ul>
 
           <div className="new-item__cta">
-            <button className="new-item__cta--save">SAVE</button>
+            <button className="new-item__cta--save" onClick={this.saveItem}>
+              SAVE
+            </button>
             <button className="new-item__cta--cancel" onClick={this.closeModal}>
               CANCEL
             </button>

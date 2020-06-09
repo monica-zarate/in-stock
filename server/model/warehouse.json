@@ -172,6 +172,16 @@
         "lastOrdered": "2019-08-19",
         "location": "Toronto, CA",
         "categories": "electronics, computers, cameras, tv"
+      },
+      {
+        "productId": "157ccb02-17bc-4896-9dc8-952d99cadfcb",
+        "productName": "MyName",
+        "description": "This is optinal but I don't care",
+        "inStock": "Out of Stock",
+        "quantity": "25",
+        "lastOrdered": "2020-06-06",
+        "location": "Toronto, CA",
+        "categories": ""
       }
     ]
   },
@@ -185,6 +195,17 @@
     "phoneNumber": "403-735-1200",
     "email": "calgarymanager@brainstation.io",
     "categories": "electronics, computers, cameras, tv",
-    "products": []
+    "products": [
+      {
+        "productId": "3b86915a-d2ce-4a67-8710-7246286bd4a9",
+        "productName": "other",
+        "description": "Optional",
+        "inStock": "In Stock",
+        "quantity": "25",
+        "lastOrdered": "2020*06*07",
+        "location": "Calgary, CA",
+        "categories": ""
+      }
+    ]
   }
 ]
